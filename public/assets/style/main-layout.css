@@ -1,0 +1,66 @@
+.navbar-brand {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em;
+  font-weight: 650;
+  color: white !important;
+  margin-left: 15px;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+  border: transparent;
+}
+
+.navbar {
+  padding-top: 2%;
+}
+
+#home,.custom-nav-link {
+  color: white;
+  font-size: 1.3em;
+  margin-right: 15px; 
+  transition: color 0.3s ease; 
+}
+
+.active #home, .custom-nav-link.active {
+  color: #ffc107;
+}
+
+#home:hover,.custom-nav-link:hover {
+  color: #e0a800;
+}
+
+.section {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.begin {
+  margin-top: 5%;
+}
+
+#hero::before,#about::before,#skill-experience::before,#portofolio::before,#contact::before {
+  content: '';
+  display: block;
+  height: 100px; 
+  margin-top: -100px;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: 650;
+  }
+  
+  .custom-nav-link {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 20px;
+  }
+}
