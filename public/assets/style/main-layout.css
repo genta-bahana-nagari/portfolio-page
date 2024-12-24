@@ -63,4 +63,8 @@
     justify-content: center;
     gap: 20px;
   }
+
+  div#footer {
+     font-size: 12px !important;
+  }
 }

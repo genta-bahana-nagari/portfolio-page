@@ -7,11 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="{{ asset('assets/style/main-layout.css') }}" rel="stylesheet">
-  <link rel="icon" type="image/jpeg" href="{{ asset('assets/image/ICON.jpg') }}">
-  <!-- <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
-  <link rel="manifest" href="{{ asset('site.webmanifest') }}"> -->
+  <link rel="icon" type="image/jpeg" href="{{ asset('assets/image/ICON 2.png') }}">
 </head>
 <body style="background-color: black;">
   <!-- Header -->
@@ -71,7 +67,7 @@
   <div class="container-fluid" style="padding-left: 3%; padding-right: 3%;">
     <footer class="d-flex flex-wrap align-items-center py-3 my-1 border-top">
       <div class="container my-auto">
-          <div class="copyright text-center my-auto" style="color: white;">
+          <div id="footer" class="text-center my-auto" style="color: white;">
               <span>Copyright &copy; 2024 Genta Bahana Nagari All rights reserved.</span>
           </div>
       </div>

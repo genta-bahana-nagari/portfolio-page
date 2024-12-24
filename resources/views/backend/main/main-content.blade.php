@@ -482,7 +482,9 @@
   <div class="container" style="color: white;">
     <div class="row align-items-justify" style="padding-right: 5%; padding-left: 5%;">
       <h1 class="title text-center">Portfolio</h1>
-      <h5 class="text-center" id="brief"> Take a look on my previous project. Check on
+      <h5 class="text-center" id="brief"> Take a look on my previous project.
+        <br>
+        Check on
         <span>
           <a href="https://github.com/genta-bahana-nagari" class="link-github"
           target="_blank">GitHub</a>
@@ -498,9 +500,9 @@
             <h5 class="card-text">Inventory System</h5>
             <p>Laravel based inventory system with high reliability and data acuracy.</p>
             <div class="d-flex flex-wrap align-items-center py-1 my-1 border-top" id="option"></div>
-              <a href="https://sinvent.gentabahana.me" id="to-view-code">Live Preview</a>
+              <a href="https://sinvent.gentabahana.me" id="to-view-code" target="_blank">Live Preview</a>
               <span>
-              <a href="https://github.com/genta-bahana-nagari/sinvent24" id="to-view-code">Source Code</a>
+              <a href="https://github.com/genta-bahana-nagari/sinvent24" id="to-view-code" target="_blank">Source Code</a>
               </span>
           </div>
         </div>
@@ -512,7 +514,7 @@
             <h5 class="card-text">Music Studio Webpage</h5>
             <p>Inspired from Stembayo Karawitan Group, with a touch of Wordpress styling.</p>
             <div class="d-flex flex-wrap align-items-center py-1 my-1 border-top" id="view-or-code"></div>
-              <a href="https://studio.gentabahana.me" id="to-view-code">Live Preview</a>
+              <a href="https://studio.gentabahana.me" id="to-view-code" target="_blank">Live Preview</a>
           </div>
         </div>
       </div>
@@ -523,13 +525,13 @@
             <h5 class="card-text">ESP Camera</h5>
             <p>Built for P5 school event. Perfect combination of cheap components and inovations.</p>
             <div class="d-flex flex-wrap align-items-center py-1 my-1 border-top" id="view-or-code"></div>
-              <a href="#" id="to-view-code">Source Code (TBA)</a>
+              <a href="#" id="to-view-code" target="_blank">Source Code (TBA)</a>
           </div>
         </div>
       </div>
     </div>
     <div class="row pt-4 justify-content-center align-items-center">
-      <a href="https://drive.google.com/file/d/1poK5SafFD54ft0oFd75NZwe99upeUeuR/view?usp=drive_link" class="btn button-yellow" style="width: auto;"
+      <a href="https://drive.google.com/file/d/1_Vc9yrPF4kCr_UdkXUhno7jz0hDBGyP3/view?usp=sharing" class="btn button-yellow" style="width: auto;"
       target="_blank">Download Portfolio (pdf)</a>
     </div>
   </div>
