@@ -377,7 +377,7 @@
             src="https://cdn-icons-png.flaticon.com/512/926/926076.png" alt="...">
           </td>
           <td class="cell-skill">
-            <img class="icon-skill" data-bs-toggle="modal" data-bs-target="#Linux"
+            <img class="icon-skill" data-bs-toggle="modal" data-bs-target="#System"
             src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="...">
           </td>
           <td class="cell-skill">
