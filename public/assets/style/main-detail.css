@@ -1,0 +1,103 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-brand {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em;
+  font-weight: 650;
+  color: white !important;
+  margin-left: 15px;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+  border: transparent;
+}
+
+.navbar {
+  padding-top: 2%;
+}
+
+.custom-nav-link {
+  color: white;
+  font-size: 1.3em;
+  margin-right: 15px; 
+  transition: color 0.3s ease; 
+}
+
+.custom-nav-link:hover {
+  color: #e0a800;
+}
+
+.hero {
+  margin-top: 3%;
+}
+
+.image-container {
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%; /* Fully circular shape */
+  overflow: hidden; /* Ensures the image fits inside the circular shape */
+  margin: 0 auto; /* Center alignment for small screens */
+  margin-bottom: 5%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%; /* Ensures the image stays circular */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: 650;
+  }
+  
+  .custom-nav-link {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 20px;
+  }
+
+  div#footer {
+    font-size: 12px !important;
+  }
+
+  #mini-hero {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image-container {
+    width: 120px; 
+    height: 120px;
+    margin-bottom: 15px; /* Adds space between image and text on smaller screens */
+  }
+
+  .intro {
+    font-size: 14px; /* Adjust font size for better readability */
+    text-align: center; /* Centers the text below the image on small screens */
+  }
+}

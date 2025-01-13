@@ -1,0 +1,53 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-brand {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em;
+  font-weight: 650;
+  color: white !important;
+  margin-left: 15px;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+  border: transparent;
+}
+
+.navbar {
+  padding-top: 2%;
+}
+
+.custom-nav-link {
+  color: white; 
+  font-size: 1.3em;
+  margin-right: 15px; 
+  transition: color 0.3s ease; 
+}
+
+.custom-nav-link:hover {
+  color: #e0a800 !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: 650;
+  }
+  
+  .custom-nav-link {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 20px;
+  }
+
+  div#footer {
+     font-size: 12px !important;
+  }
+}
