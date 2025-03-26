@@ -18,12 +18,12 @@ const portfolioItems = [
         responsive, user-friendly experiences using modern frameworks and
         styling tools. Also tinkering with numerous modules to build a
         masterpiece. Check my{" "}
-        <span className="text-yellow-300">other projects</span> on{" "}
+        <span className="text-yellow-500">other projects</span> on{" "}
         <a
           href="https://github.com/genta-bahana-nagari"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-yellow-300 hover:underline transition-all duration-200"
+          className="text-white hover:text-yellow-500 hover:underline transition-all duration-200"
         >
           my GitHub!
         </a>
@@ -81,7 +81,7 @@ const portfolioItems = [
         year: "2020-2021",
         role: "Chairman of Catholic Religious Division",
         what_i_do:
-          "Led school activities, facilitated communication between students and faculty, and organized events to enhance student engagement.",
+          "Led school religious activities, facilitated communication between students and faculty, and organized events to enhance student engagement.",
         image: OSIS_SMP,
       },
     ],

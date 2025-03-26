@@ -58,7 +58,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-gray-300 px-4 sm:px-10">
+          <p className="mt-3 text-sm sm:text-base md:text-lg text-white px-4 sm:px-10">
             A <span className="text-yellow-400">Developer</span> who loves
             crafting software, a{" "}
             <span className="text-yellow-400">Network and System Engineer</span>{" "}
@@ -77,7 +77,7 @@ const Hero = () => {
               href="#porto"
               whileHover={{ scale: 1.1 }}
               className="w-full sm:w-auto rounded-full border bg-white px-5 sm:px-6 py-2 sm:py-3 text-black font-semibold shadow-lg 
-              transition-all duration-300 hover:bg-yellow-500 hover:text-black text-sm sm:text-base text-center"
+              transition-all duration-200 hover:bg-yellow-500 hover:text-black text-sm sm:text-base text-center"
             >
               See My Works
             </motion.a>
@@ -87,7 +87,7 @@ const Hero = () => {
               target="_blank"
               whileHover={{ scale: 1.1 }}
               className="w-full sm:w-auto rounded-full bg-yellow-400 px-5 sm:px-6 py-2 sm:py-3 text-black font-semibold shadow-lg 
-              transition-all duration-300 hover:bg-yellow-500 text-sm sm:text-base text-center"
+              transition-all duration-200 hover:bg-yellow-500 text-sm sm:text-base text-center"
             >
               Download CV (.pdf)
             </motion.a>
@@ -96,7 +96,7 @@ const Hero = () => {
               href="#contact"
               whileHover={{ scale: 1.1 }}
               className="w-full sm:w-auto rounded-full border bg-white px-5 sm:px-6 py-2 sm:py-3 text-black font-semibold shadow-lg 
-              transition-all duration-300 hover:bg-yellow-500 hover:text-black text-sm sm:text-base text-center"
+              transition-all duration-200 hover:bg-yellow-500 hover:text-black text-sm sm:text-base text-center"
             >
               Contact Me
             </motion.a>
