@@ -48,7 +48,7 @@ To deploy the project, use one of these services:
 ![Contact Section](./screenshot_3.jpeg)
 
 ## 👤 Author
-- **Your Name** – [LinkedIn](https://www.linkedin.com/in/genta-bahana-nagari/) | [GitHub](https://github.com/genta-bahana-nagari)
+- **MySelf because this is private**
 
 ## 🌟 Show Your Support
 If you like this project, feel free to give it a ⭐ on GitHub!
