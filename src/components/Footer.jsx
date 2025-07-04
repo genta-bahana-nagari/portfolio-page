@@ -3,10 +3,11 @@ import { FaInstagram } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="mt-20 md:text-base md:mt-10 w-full border-t border-white text-center text-white">
       <p className="my-5 text-sm md:text-base">
-        Copyright © 2025 Genta Bahana Nagari.
+        Copyright © {currentYear} Genta Bahana Nagari.
         All rights reserved.
       </p>
     </div>
