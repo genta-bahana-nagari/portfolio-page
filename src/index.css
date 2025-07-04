@@ -1,4 +1,21 @@
 @import "tailwindcss";
+
 * {
   font-family: 'Merriweather';
+}
+
+
+@layer utilities {
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-slide {
+    animation: slide linear infinite;
+  }
 }
