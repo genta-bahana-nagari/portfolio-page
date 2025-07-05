@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ name, desc, image, previewLink, codeLink }) => {
   return (
     <motion.div
-      className="p-4 bg-black text-white flex flex-col shadow-lg w-80 rounded-lg"
-      initial={{ scale: 0.9, opacity: 0 }}
+      className="flex flex-col justify-between bg-black text-white p-4 shadow-lg rounded-lg h-full w-full"
+      initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
@@ -12,18 +12,24 @@ const ProjectCard = ({ name, desc, image, previewLink, codeLink }) => {
         <img
           src={image}
           alt={name}
-          className="h-40 w-full object-cover rounded-md mb-4"
+          className="h-36 sm:h-40 w-full object-cover rounded-md mb-4"
         />
       )}
-      <h4 className="text-xl font-semibold">{name}</h4>
-      {desc && <p className="text-white mt-2">{desc}</p>}
-      <div className="mt-4 flex items-center justify-center space-x-4">
+
+      <div className="flex flex-col flex-grow">
+        <h4 className="text-base sm:text-lg font-semibold">{name}</h4>
+        <p className="text-sm sm:text-base mt-2 text-wrap break-words">
+          {desc}
+        </p>
+      </div>
+
+      <div className="mt-4 flex flex-wrap justify-center gap-4">
         {previewLink && (
           <a
             href={previewLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white border-b border-white hover:text-gray-300"
+            className="text-white text-sm border-b border-white hover:text-yellow-400"
           >
             Live Preview
           </a>
@@ -33,7 +39,7 @@ const ProjectCard = ({ name, desc, image, previewLink, codeLink }) => {
             href={codeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white border-b border-white hover:text-gray-300"
+            className="text-white text-sm border-b border-white hover:text-yellow-400"
           >
             Source Code
           </a>
