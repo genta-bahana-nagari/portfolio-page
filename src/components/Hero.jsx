@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
 
         {/* Teks Hero */}
-        <div>
+        <div className="mx-auto text-center">
           <h1 className="text-2xl scale-70 sm:text-3xl md:text-4xl font-extrabold">
             Hi, I'm{" "}
             <span className="text-yellow-400">
@@ -58,7 +58,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-white px-4 sm:px-10">
+          <p className="mt-3 text-sm sm:text-base md:text-lg text-white mx-8 md:mx-12 lg:mx-16">
             A <span className="text-yellow-400">Developer</span> who loves
             crafting software, a{" "}
             <span className="text-yellow-400">Network and System Engineer</span>{" "}
