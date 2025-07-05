@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "/src/components/porto_cards/ProjectCards";
-import OrganizationCard from "/src/components/porto_cards/OrganizationCards";
+import ExperienceItems from "/src/components/porto_cards/ExperienceItems";
+import Gamatechno from "/src/assets/images/Gamatechno.jpg";
 import KARAWITAN from "/src/assets/images/KARAWITAN.png";
 import PAKS from "/src/assets/images/PAKS.png";
 import OSIS_SMP from "/src/assets/images/OSIS_SMP.png";
@@ -72,18 +73,18 @@ const portfolioItems = [
     ],
   },
   {
-    title: "Experience",
+    title: "My Experience",
     description:
-      "Beyond coding, I’m passionate about teamwork and leadership. I’ve played an active role in cultural organizations and student councils, where I’ve led initiatives that spark creativity, strengthen collaboration, and bring people together. Whether it's preserving traditions or driving impactful projects, I love working with teams to turn ideas into reality!",
-    component: "OrganizationCard",
+      "I’m currently a software intern, passionate not only about technology but also about leadership, teamwork, and cultural engagement. Through active roles in student councils and cultural groups, I’ve led initiatives that foster creativity, collaboration, and community. Whether driving innovation or preserving traditions, I’m committed to working with diverse teams to create meaningful impact.",
+    component: "ExperienceItems",
     items: [
       {
-        name: "PT Gamatechno Indonesia - Intern",
+        name: "PT Gamatechno Indonesia",
         year: "2025-Present",
         role: "Fullstack Engineer Intern",
         what_i_do:
           "Worked with clients to build and maintain websites, focusing on performance and accessibility.",
-        image: null,
+        image: Gamatechno,
       },
       {
         name: "PAKS Stembayo",
@@ -195,7 +196,7 @@ const Porto = () => {
         ) : (
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {selectedData.items.map((item, index) => (
-              <OrganizationCard key={index} {...item} />
+              <ExperienceItems key={index} {...item} />
             ))}
           </div>
         )}
