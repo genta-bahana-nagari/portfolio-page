@@ -1,6 +1,7 @@
 // skillData.js
 import { IoLogoVue } from "react-icons/io5";
 import { TbBrandNextjs } from "react-icons/tb";
+import { AiFillGitlab } from "react-icons/ai";
 import { BiLogoPostgresql } from "react-icons/bi";
 import {
   FaHtml5,
@@ -29,6 +30,7 @@ import {
   SiNginx,
   SiNginxproxymanager,
   SiApache,
+  SiPrisma,
 } from "react-icons/si";
 
 const skillCategories = [
@@ -58,6 +60,7 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
       { name: "MySQL", icon: <FaDatabase className="text-indigo-400" /> },
+      { name: "Prisma", icon: <SiPrisma className="text-white" /> },
       {
         name: "PostgreSQL",
         icon: <BiLogoPostgresql className="text-blue-700" />,
@@ -101,7 +104,7 @@ const skillCategories = [
     skills: [
       { name: "Cisco Router", icon: <SiCisco className="text-blue-400" /> },
       {
-        name: "Mikrotik Routerboard",
+        name: "Mikrotik Router",
         icon: <SiMikrotik className="text-white" />,
       },
     ],
@@ -115,12 +118,13 @@ const skillCategories = [
         name: "Project Planning",
         icon: <FaProjectDiagram className="text-yellow-400" />,
       },
+      { name: "GitLab", icon: <AiFillGitlab className="text-orange-500" /> },
+      { name: "GitHub", icon: <FaGithub className="text-white" /> },
+      { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
       {
         name: "Agile & Scrum",
         icon: <FaProjectDiagram className="text-green-400" />,
       },
-      { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
-      { name: "GitHub", icon: <FaGithub className="text-white" /> },
     ],
   },
 ];

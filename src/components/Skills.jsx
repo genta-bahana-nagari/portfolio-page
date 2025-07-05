@@ -38,7 +38,7 @@ const Skills = () => {
           className="max-w-6xl mx-auto p-6 bg-black shadow-xl"
         >
           <h3 className="text-2xl font-semibold mb-4">{current.title}</h3>
-          <p className="text-gray-300 mb-6">{current.description}</p>
+          <p className="text-gray-300 md:text-lg mb-6">{current.description}</p>
 
           {/* Responsive Grid: 6 items per row on large screens */}
           <div className="flex flex-wrap justify-center gap-6 mx-auto">
