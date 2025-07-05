@@ -4,18 +4,21 @@
   font-family: 'Merriweather';
 }
 
-
-@layer utilities {
-  @keyframes slide {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0%);
   }
-
-  .animate-slide {
-    animation: slide linear infinite;
+  100% {
+    transform: translateX(-50%);
   }
+}
+
+.marquee-track {
+  display: flex;
+  animation: infinite-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.project-slide {
+  flex-shrink: 0;
 }
