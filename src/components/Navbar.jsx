@@ -22,13 +22,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 z-30 w-full bg-black mt-2 py-4 px-6 md:px-12 flex justify-between items-center text-white shadow-md overflow-x-hidden">
+    <nav className="fixed top-0 left-0 z-30 w-full bg-black/90 py-4 px-6 md:px-12 flex justify-between items-center text-white shadow-md overflow-x-hidden">
       {/* Logo */}
       <a
         href="#"
-        className="text-2xl text-yellow-400 md:text-3xl font-bold tracking-wide"
+        className="text-2xl text-white md:text-3xl font-bold tracking-wide"
       >
-        GENTA.<span className="text-white">Porto</span>
+        GENTA.Porto
       </a>
 
       {/* Desktop Menu */}
@@ -75,7 +75,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 max-w-[100vw] bg-black text-white px-6 py-8 z-30 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 max-w-[100vw] bg-black/75 text-white px-6 py-8 z-30 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
