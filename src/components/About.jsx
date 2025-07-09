@@ -24,7 +24,7 @@ const About = () => {
               Vocational High School student
             </span>{" "}
             from Yogyakarta, Indonesia. Passionate about learning and adapting
-            to new challenges, I am currently an{" "}
+            to new challenges. I am currently an{" "}
             <span className="text-yellow-400 font-semibold">
               intern student as Fullstack Engineer
             </span>
