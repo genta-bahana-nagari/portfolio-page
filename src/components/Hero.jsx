@@ -71,32 +71,42 @@ const Hero = () => {
             </span>
           </p>
 
-          {/* Tombol Aksi */}
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          {/* CTA Buttons */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4 sm:gap-5">
+            {/* Primary Action */}
             <motion.a
               href="#porto"
-              whileHover={{ scale: 1.1 }}
-              className="w-full sm:w-auto rounded-full border bg-white px-5 sm:px-6 py-2 sm:py-3 text-black font-semibold shadow-lg 
-              transition-all duration-200 hover:bg-yellow-500 hover:text-black text-sm sm:text-base text-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 
+    text-sm sm:text-base font-semibold bg-yellow-400 text-black shadow-md 
+    transition duration-200 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
             >
               See My Works
             </motion.a>
 
+            {/* Secondary Action */}
             <motion.a
               href="https://drive.google.com/file/d/1NmUUAFNKFQH_wYrx2fyxm24nF3HVjBl-/view?usp=drive_link"
               target="_blank"
-              whileHover={{ scale: 1.1 }}
-              className="w-full sm:w-auto rounded-full bg-yellow-400 px-5 sm:px-6 py-2 sm:py-3 text-black font-semibold shadow-lg 
-              transition-all duration-200 hover:bg-yellow-500 text-sm sm:text-base text-center"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 
+    text-sm sm:text-base font-semibold bg-white text-black shadow-md 
+    transition duration-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
             >
-              Download CV (.pdf)
+              Download CV
             </motion.a>
 
+            {/* Tertiary Action */}
             <motion.a
               href="#contact"
-              whileHover={{ scale: 1.1 }}
-              className="w-full sm:w-auto rounded-full border bg-white px-5 sm:px-6 py-2 sm:py-3 text-black font-semibold shadow-lg 
-              transition-all duration-200 hover:bg-yellow-500 hover:text-black text-sm sm:text-base text-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 
+    text-sm sm:text-base font-semibold border border-white text-white shadow-md 
+    transition duration-200 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white"
             >
               Contact Me
             </motion.a>
