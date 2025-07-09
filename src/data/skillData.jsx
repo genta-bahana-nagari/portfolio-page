@@ -16,6 +16,7 @@ import {
   FaLaravel,
   FaGitAlt,
   FaGithub,
+  FaDocker,
   FaCloudflare,
 } from "react-icons/fa";
 import {
@@ -32,6 +33,7 @@ import {
   SiApache,
   SiPrisma,
 } from "react-icons/si";
+import { DiDocker } from "react-icons/di";
 
 const skillCategories = [
   {
@@ -49,8 +51,8 @@ const skillCategories = [
         name: "Tailwind CSS",
         icon: <SiTailwindcss className="text-blue-400" />,
       },
-      { name: "Vue.js", icon: <IoLogoVue className="text-green-400" /> },
-      { name: "Nuxt3", icon: <SiNuxtdotjs className="text-green-300" /> },
+      // { name: "Vue.js", icon: <IoLogoVue className="text-green-400" /> },
+      // { name: "Nuxt3", icon: <SiNuxtdotjs className="text-green-300" /> },
     ],
   },
   {
@@ -80,7 +82,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Linux Management",
+    title: "Server & Deployment",
     description:
       "Managing Linux systems for servers, automation, and security.",
     skills: [
@@ -91,6 +93,10 @@ const skillCategories = [
         icon: <SiNginxproxymanager className="text-white" />,
       },
       { name: "Apache", icon: <SiApache className="text-[#D22128]" /> },
+      {
+        name: "Docker",
+        icon: <FaDocker className="text-blue-700" />,
+      },
       {
         name: "Cloudflare",
         icon: <FaCloudflare className="text-orange-400" />,
