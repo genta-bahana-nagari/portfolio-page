@@ -7,7 +7,7 @@ import KARAWITAN from "/src/assets/images/KARAWITAN.png";
 import PAKS from "/src/assets/images/PAKS.png";
 import OSIS_SMP from "/src/assets/images/OSIS_SMP.png";
 import Sinvent from "/src/assets/images/Sinvent.png";
-import Studio from "/src/assets/images/Studio.jpg";
+import SIJA_Phone from "/src/assets/images/SIJA_Phone.png";
 import esp_cam from "/src/assets/images/esp_cam.jpg";
 import FactsClub from "/src/assets/images/Facts-Club.png";
 import PortoPage from "/src/assets/images/PortoPage.png";
@@ -43,6 +43,13 @@ const portfolioItems = [
         codeLink: "https://github.com/genta-bahana-nagari/useless-facts-club",
       },
       {
+        name: "SIJA Phone",
+        desc: "Simple group project about Phone Store, featured with RBAC, checkout and shipping feature.",
+        image: SIJA_Phone,
+        previewLink: "https://sijaphone.gentabahana.me",
+        codeLink: "https://github.com/genta-bahana-nagari/phone_store",
+      },
+      {
         name: "Portfolio Page",
         desc: "You're here. This very portfolio page, built with React and Framer Motion for smooth animations.",
         image: PortoPage,
@@ -56,13 +63,6 @@ const portfolioItems = [
         previewLink: "https://sinvent.gentabahana.me",
         codeLink: "https://github.com/genta-bahana-nagari/sinvent24",
       },
-      // {
-      //   name: "Music Studio",
-      //   desc: "Inspired from Stembayo Karawitan Group, with a touch of Wordpress styling.",
-      //   image: Studio,
-      //   previewLink: null,
-      //   codeLink: null,
-      // },
       {
         name: "ESP32 Camera",
         desc: "Built for P5 school event. Perfect combination of price-friendly components and innovations.",
