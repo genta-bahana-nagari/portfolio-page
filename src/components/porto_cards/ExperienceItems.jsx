@@ -8,7 +8,7 @@ const ExperienceItems = ({ name, role, year, what_i_do, image }) => {
         bg-gradient-to-br from-[#1f1f1f] via-[#111] to-black
         text-white p-6 md:p-8 rounded-2xl shadow-lg backdrop-blur-md
         hover:shadow-yellow-400/30 hover:-translate-y-1 transition-all duration-300 ease-in-out
-        w-full max-w-4xl mx-auto
+        w-full max-w-4xl mx-auto cursor-default
       "
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}

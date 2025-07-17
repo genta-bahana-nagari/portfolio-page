@@ -6,7 +6,6 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -16,23 +15,20 @@ const Contact = () => {
       .sendForm(
         "service_b3aw2eo",
         "template_76zp32k",
-        form.current, 
-        "xhkwU5hilFqD7CEcU",
+        form.current,
+        "xhkwU5hilFqD7CEcU"
       )
       .then(
-        (result) => {
-          console.log("Success:", result.text);
+        () => {
           alert("Message sent successfully!");
         },
-        (error) => {
-          console.log("Failed:", error.text);
+        () => {
           alert("Failed to send message. Try again.");
         }
       );
 
     e.target.reset(); // Reset form setelah terkirim
   };
-
 
   return (
     <div

@@ -75,7 +75,7 @@ const portfolioItems = [
   {
     title: "My Experience",
     description:
-      "I’m currently a software intern, passionate not only about technology but also about leadership, teamwork, and cultural engagement. Through active roles in student councils and cultural groups, I’ve led initiatives that foster creativity, collaboration, and community. Whether driving innovation or preserving traditions, I’m committed to working with diverse teams to create meaningful impact.",
+      "I’m currently a fullstack intern, passionate not only about technology but also about leadership, teamwork, and cultural engagement. Through active roles in student councils and cultural groups, I’ve led initiatives that foster creativity, collaboration, and community. Whether driving innovation or preserving traditions, I’m committed to working with diverse teams to create meaningful impact.",
     component: "ExperienceItems",
     items: [
       {
@@ -87,7 +87,7 @@ const portfolioItems = [
         image: Gamatechno,
       },
       {
-        name: "PAKS Stembayo",
+        name: "PAKS Stembayo | Karawitan Branch",
         year: "2023-2024",
         role: "Active member and Staff of Karawitan",
         what_i_do:
@@ -103,7 +103,7 @@ const portfolioItems = [
         image: KARAWITAN,
       },
       {
-        name: "Junior High Council",
+        name: "Junior High Student Council",
         year: "2020-2021",
         role: "Chairman of Catholic Religious Division",
         what_i_do:
