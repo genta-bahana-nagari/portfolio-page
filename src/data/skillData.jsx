@@ -47,13 +47,13 @@ const skillCategories = [
       { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
       { name: "React", icon: <FaReact className="text-cyan-400" /> },
       { name: "Next.js", icon: <TbBrandNextjs className="text-white" /> },
+      { name: "Vue.js", icon: <IoLogoVue className="text-green-400" /> },
+      { name: "Nuxt3", icon: <SiNuxtdotjs className="text-green-300" /> },
       { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" /> },
       {
-        name: "Tailwind CSS",
+        name: "Tailwind",
         icon: <SiTailwindcss className="text-blue-400" />,
       },
-      // { name: "Vue.js", icon: <IoLogoVue className="text-green-400" /> },
-      // { name: "Nuxt3", icon: <SiNuxtdotjs className="text-green-300" /> },
     ],
   },
   {

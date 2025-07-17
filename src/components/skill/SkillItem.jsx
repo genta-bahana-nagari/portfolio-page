@@ -9,7 +9,7 @@ const SkillItem = ({ icon, name }) => (
     <div className="text-3xl md:text-4xl lg:text-5xl group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">
       {icon}
     </div>
-    <p className="mt-2 text-sm md:text-base font-medium text-gray-200 group-hover:text-yellow-300 transition-colors duration-200">
+    <p className="mt-2 text-sm md:text-base font-medium text-gray-200 transition-colors duration-200">
       {name}
     </p>
   </motion.div>

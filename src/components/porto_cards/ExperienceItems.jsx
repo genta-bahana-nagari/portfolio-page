@@ -35,7 +35,7 @@ const ExperienceItems = ({ name, role, year, what_i_do, image }) => {
         <p className="text-yellow-400 text-sm md:text-base font-medium mt-1">
           {role}
         </p>
-        <p className="text-yellow-300 text-xs md:text-sm mb-3 tracking-wide">
+        <p className="text-yellow-400 text-sm md:text-base font-medium mt-1">
           {year}
         </p>
         <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl">

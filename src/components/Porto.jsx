@@ -139,8 +139,8 @@ const Porto = () => {
           <button
             key={index}
             onClick={() => setSelectedCategory(index)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm sm:text-base font-medium transition border-2
-              border-transparent hover:border-yellow-400 cursor-pointer ${
+            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm sm:text-base font-medium transition border
+              border-gray-600 hover:bg-yellow-400 hover:text-black cursor-pointer ${
                 selectedCategory === index
                   ? "bg-yellow-400 text-black"
                   : "bg-black"
