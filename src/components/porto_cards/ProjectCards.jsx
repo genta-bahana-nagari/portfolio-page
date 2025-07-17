@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ name, desc, image, previewLink, codeLink }) => {
   return (
     <motion.div
-      className="flex flex-col justify-between bg-black text-white shadow-lg rounded-lg h-full w-full"
+      className="flex flex-col justify-between border border-gray-100 p-4 bg-black text-white shadow-lg rounded-2xl h-full w-full cursor-pointer backdrop-blur-md
+        hover:shadow-gray-400/60 hover:-translate-y-3 transition-all duration-300 ease-in-out"
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -12,7 +13,7 @@ const ProjectCard = ({ name, desc, image, previewLink, codeLink }) => {
         <img
           src={image}
           alt={name}
-          className="h-36 md:h-40 w-full object-cover rounded-md mb-4"
+          className="h-36 md:h-40 w-full object-cover rounded-lg mb-4"
         />
       )}
 
