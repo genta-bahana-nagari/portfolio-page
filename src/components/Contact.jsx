@@ -51,7 +51,7 @@ const Contact = () => {
           Contact Me
         </h2>
         <motion.div
-          className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4 sm:px-8 md:px-12"
+          className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4 sm:px-8 md:px-12 lg:px-24"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1 }}
           exit={{ opacity: 0, y: -50 }}

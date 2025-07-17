@@ -58,7 +58,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-white mx-8 md:mx-12 lg:mx-16">
+          <p className="mt-3 text-sm sm:text-base md:text-lg text-white mx-4 md:mx-8 lg:mx-24 lg:px-24">
             A <span className="text-yellow-400">Developer</span> who loves
             crafting software, a{" "}
             <span className="text-yellow-400">Network and System Engineer</span>{" "}

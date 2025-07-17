@@ -32,8 +32,8 @@ import {
   SiNginxproxymanager,
   SiApache,
   SiPrisma,
+  SiTypescript,
 } from "react-icons/si";
-import { DiDocker } from "react-icons/di";
 
 const skillCategories = [
   {
@@ -44,6 +44,7 @@ const skillCategories = [
       { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
       { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
       { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
       { name: "React", icon: <FaReact className="text-cyan-400" /> },
       { name: "Next.js", icon: <TbBrandNextjs className="text-white" /> },
       { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" /> },
