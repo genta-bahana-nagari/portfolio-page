@@ -11,6 +11,7 @@ import SIJA_Phone from "/src/assets/images/SIJA_Phone.png";
 import esp_cam from "/src/assets/images/esp_cam.jpg";
 import FactsClub from "/src/assets/images/Facts-Club.png";
 import PortoPage from "/src/assets/images/PortoPage.png";
+import SafeWalk from "/src/assets/images/safe_walk.jpg";
 
 const portfolioItems = [
   {
@@ -48,6 +49,13 @@ const portfolioItems = [
         image: SIJA_Phone,
         previewLink: "https://sijaphone.gentabahana.me",
         codeLink: "https://github.com/genta-bahana-nagari/phone_store",
+      },
+      {
+        name: "Safewalk",
+        desc: "IoT-based safety stick to help blind people navigate safely. Built with NodeMCU and HCSR04 sensors with calibrated accuracy.",
+        image: SafeWalk,
+        previewLink: null,
+        codeLink: "https://github.com/genta-bahana-nagari/safewalk-project",
       },
       {
         name: "Portfolio Page",
