@@ -18,7 +18,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="text-sm md:text-lg leading-relaxed text-white">
+          <p className="text-xs md:text-base/8 lg:text-lg md:leading-relaxed text-white">
             I'm a dedicated{" "}
             <span className="text-yellow-400 font-semibold">
               Vocational High School student
