@@ -13,21 +13,22 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_b3aw2eo",
-        "template_76zp32k",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "xhkwU5hilFqD7CEcU"
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then(
         () => {
           alert("Message sent successfully!");
         },
-        () => {
+        (error) => {
+          console.error("EmailJS error:", error);
           alert("Failed to send message. Try again.");
         }
       );
 
-    e.target.reset(); // Reset form setelah terkirim
+    e.target.reset(); // Reset form after sending
   };
 
   return (
