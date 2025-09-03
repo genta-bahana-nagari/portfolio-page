@@ -30,7 +30,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
    ```sh
-   git clone -b main --single-branch https://github.com/genta-bahana-nagari/portfolio-page.git
+   git clone https://github.com/genta-bahana-nagari/portfolio-page.git
    cd portfolio-page
    ```
 
