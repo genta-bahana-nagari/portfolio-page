@@ -39,12 +39,20 @@ To run this project locally, follow these steps:
    ```sh
    cp .env.example .env
    ```
-   You will see this configuration and adjust them with your keys:
+   You will see this configuration and adjust them with your keys and links:
    ```sh
-   REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-   REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-   REACT_APP_EMAILJS_USER_ID=your_user_id
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_USER_ID=your_user_id
 
+   VITE_YOUR_CV_LINK=your_cv_link
+   VITE_YOUR_PORTFOLIO_LINK=your_portfolio_link
+
+   VITE_YOUR_GITHUB_LINK=your_github_link
+   VITE_YOUR_LINKEDIN_LINK=your_linkedin_link
+   VITE_YOUR_INSTAGRAM_LINK=your_instagram_link
+   VITE_YOUR_DISCORD_ID=your_discord_id
+     
    ```
 
 3. **Install dependencies:**
