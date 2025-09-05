@@ -67,19 +67,19 @@ const Contact = () => {
               {[
                 {
                   icon: <FaLinkedin />,
-                  link: "https://www.linkedin.com/in/genta-bahana-nagari",
+                  link: import.meta.env.VITE_YOUR_LINKEDIN_LINK,
                   label: "LinkedIn",
                   account: "genta-bahana-nagari",
                 },
                 {
                   icon: <FaInstagram />,
-                  link: "https://instagram.com/gentabahananagari",
+                  link: import.meta.env.VITE_YOUR_INSTAGRAM_LINK,
                   label: "Instagram",
                   account: "gentabahananagari",
                 },
                 {
                   icon: <FaGithub />,
-                  link: "https://github.com/genta-bahana-nagari",
+                  link: import.meta.env.VITE_YOUR_GITHUB_LINK,
                   label: "GitHub",
                   account: "genta-bahana-nagari",
                 },
@@ -91,7 +91,7 @@ const Contact = () => {
                 },
                 {
                   icon: <FaDiscord />,
-                  link: "https://discord.com/users/1190112258181837031",
+                  link: import.meta.env.VITE_YOUR_DISCORD_ID,
                   label: "Discord",
                   account: "genta_bahana_nagari",
                 },

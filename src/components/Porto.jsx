@@ -176,7 +176,7 @@ const Porto = () => {
         {selectedData.component === "DownloadPortfolio" ? (
           <div className="flex justify-center">
             <a
-              href="https://drive.google.com/file/d/1_Vc9yrPF4kCr_UdkXUhno7jz0hDBGyP3/view?usp=sharing"
+              href={import.meta.env.VITE_YOUR_PORTFOLIO_LINK}
               target="_blank"
               download="Genta_Portfolio.pdf"
               className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg

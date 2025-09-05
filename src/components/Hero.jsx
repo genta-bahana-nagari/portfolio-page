@@ -87,7 +87,7 @@ const Hero = () => {
 
             {/* Secondary Action */}
             <motion.a
-              href="https://drive.google.com/file/d/1NmUUAFNKFQH_wYrx2fyxm24nF3HVjBl-/view?usp=drive_link"
+              href={import.meta.env.VITE_YOUR_CV_LINK}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
