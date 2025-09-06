@@ -1,14 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "./",
-  plugins: [react(), tailwindcss()],
-  build: {
-    outDir: "dist", // Pastikan folder output benar
-    sourcemap: true, // Bisa dihapus jika tidak perlu
-  },
+  plugins: [
+    react(),
+    tailwindcss()
+  ],
 });
