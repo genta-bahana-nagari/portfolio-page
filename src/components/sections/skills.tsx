@@ -13,7 +13,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="bg-black text-white scroll-mt-24 py-14 pt-24"
+      className="bg-black text-white scroll-mt-4 md:scroll-mt-24 py-14 pt-24"
     >
       <div className="text-center">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-5 md:mb-10">My Skills</h3>
