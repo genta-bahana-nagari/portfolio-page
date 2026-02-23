@@ -5,10 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
-const images = [
-  "/images/profile_1.jpg",
-  "/images/profile_2.jpg",
-];
+const images = ["/images/profile_1.jpg", "/images/profile_2.jpg"];
 
 export function Hero() {
   const [index, setIndex] = useState(0);
@@ -23,7 +20,7 @@ export function Hero() {
 
   return (
     <section
-      id="hero"
+      id="home"
       className="flex flex-col items-center justify-center min-h-screen px-6 bg-black text-white text-center"
     >
       <motion.div
@@ -33,7 +30,7 @@ export function Hero() {
         transition={{ duration: 1 }}
       >
         {/* Profile Image */}
-        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-xl shadow-black/40">
+        <div className="relative w-42 h-42 md:w-60 md:h-60 md:w-60 rounded-full overflow-hidden shadow-xl shadow-black/40">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -71,18 +68,12 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-white/80">
+          <p className="mt-4 max-w-4xl mx-auto text-base sm:text-sm md:text-lg text-white/80">
             A <span className="text-yellow-400">Developer</span> who loves
-            crafting software, a{" "}
-            <span className="text-yellow-400">
-              Network and System Engineer
-            </span>{" "}
-            passionate about infrastructure, and a{" "}
-            <span className="text-yellow-400">
-              Culture Enthusiast
-            </span>{" "}
-            with deep love for arts — especially karawitan, musical theater,
-            and orchestra.
+            crafting software, passionate about <span className="text-yellow-400">System and Network Infrastructure</span>,{" "} and a{" "}
+            <span className="text-yellow-400">Culture Enthusiast</span> with
+            deep love for arts — especially karawitan, musical theater, and
+            orchestra.
           </p>
 
           {/* CTA Buttons */}
@@ -104,7 +95,7 @@ export function Hero() {
               whileTap={{ scale: 0.97 }}
               className="px-6 py-3 rounded-full text-sm font-semibold bg-white text-black hover:bg-gray-300 transition"
             >
-              Download CV
+              Checkout my CV
             </motion.a>
 
             <motion.a
