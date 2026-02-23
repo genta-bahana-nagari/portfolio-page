@@ -1,9 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { iconMap } from "@/components/ui/skill-icons";
+import { iconMap, IconKey } from "@/components/ui/skill/skill-icons";
 
-export function SkillItem({ icon, name }) {
+interface SkillItemProps {
+  icon: IconKey;
+  name: string;
+}
+
+export function SkillItem({ icon, name }: SkillItemProps) {
   return (
     <motion.div
       className="flex flex-col items-center text-center justify-center group cursor-pointer mx-0 md:mx-2 lg:mx-2"

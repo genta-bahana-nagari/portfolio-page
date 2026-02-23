@@ -33,3 +33,5 @@ export const iconMap = {
   cisco: <SiCisco className="text-blue-400" />,
   mikrotik: <SiMikrotik className="text-blue-100" />,
 };
+
+export type IconKey = keyof typeof iconMap;
