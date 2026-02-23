@@ -1,7 +1,5 @@
-import "./globals.css";
-import { siteConfig } from "@/lib/site";
-import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { siteConfig } from "@/lib/site";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -67,13 +65,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
         {children}
         <Footer />
       </body>
