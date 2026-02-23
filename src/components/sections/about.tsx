@@ -19,7 +19,7 @@ export function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center max-w-xl mx-auto md:mx-0"
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-10">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-5 md:mb-10">
           About Me
           </h3>
           <p className="text-sm md:text-base lg:text-lg leading-relaxed text-white/90">

@@ -16,10 +16,10 @@ export function Skills() {
       className="bg-black text-white scroll-mt-24 py-14 pt-24"
     >
       <div className="text-center">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-10">My Skills</h3>
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-5 md:mb-10">My Skills</h3>
       </div>
 
-      <div className="flex justify-center flex-wrap gap-4 mb-8 px-4">
+      <div className="flex justify-center flex-wrap gap-3 md:gap-4 mb-8 px-4">
         {skillCategories.map((cat, idx) => (
           <SkillTab
             key={idx}
