@@ -8,7 +8,7 @@ const navLinks = [
   { id: "hero", href: "#hero", icon: <BiHome />, label: "Home" },
   { id: "about", href: "#about", icon: <BiUser />, label: "About" },
   { id: "skills", href: "#skills", icon: <BiCodeAlt />, label: "Skills" },
-  { id: "projects", href: "#projects", icon: <BiBriefcase />, label: "Projects" },
+  { id: "resume", href: "#resume", icon: <BiBriefcase />, label: "Resume" },
   { id: "contact", href: "#contact", icon: <BiEnvelope />, label: "Contact" },
 ];
 
