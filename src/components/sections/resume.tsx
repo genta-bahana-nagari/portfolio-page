@@ -1,7 +1,7 @@
 export function Resume() {
   return (
     <section>
-      <h2>Resume Section</h2>
+      <h2>Resume</h2>
     </section>
   )
 }
