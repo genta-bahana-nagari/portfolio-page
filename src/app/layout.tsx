@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout/footer";
 import { siteConfig } from "@/lib/site";
 import { Metadata } from "next";
+import "./globals.css"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url || ""),
