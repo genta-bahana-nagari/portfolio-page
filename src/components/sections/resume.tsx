@@ -21,10 +21,10 @@ export function Resume() {
       className="bg-black text-white scroll-mt-4 md:scroll-mt-24 py-14 md:py-24"
     >
       <div className="text-center mb-10 px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-5 md:mb-10">
           Resume
-        </h2>
-        <p className="text-gray-300 mt-2 md:mt-4 text-base md:text-lg">
+        </h3>
+        <p className="text-sm md:text-base lg:text-lg leading-relaxed text-white/90">
           My professional journey and achievements.
         </p>
       </div>

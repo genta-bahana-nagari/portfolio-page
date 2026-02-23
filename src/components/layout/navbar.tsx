@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import {
   BiHome,
   BiUser,
-  BiCodeAlt,
   BiBriefcase,
   BiEnvelope,
 } from "react-icons/bi";
@@ -12,7 +11,6 @@ import {
 const navLinks = [
   { id: "home", icon: <BiHome />, label: "Home" },
   { id: "about", href: "#about", icon: <BiUser />, label: "About" },
-  { id: "skills", href: "#skills", icon: <BiCodeAlt />, label: "Skills" },
   { id: "resume", href: "#resume", icon: <BiBriefcase />, label: "Resume" },
   { id: "contact", href: "#contact", icon: <BiEnvelope />, label: "Contact" },
 ];
@@ -56,7 +54,6 @@ export function Navbar() {
 
   return (
     <>
-      {/* Desktop Floating Capsule */}
       <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-10">
         <nav className="flex items-center gap-8 px-12 py-5 rounded-full bg-black/70 backdrop-blur-lg border border-white/10 shadow-lg">
           {navLinks.map((link) => (
@@ -71,7 +68,6 @@ export function Navbar() {
             >
               {link.label}
 
-              {/* Active Dot */}
               {active === link.id && (
                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-yellow-400 rounded-full" />
               )}
@@ -80,7 +76,6 @@ export function Navbar() {
         </nav>
       </div>
 
-      {/* Mobile Bottom Dock */}
       <div className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-10">
         <nav className="flex items-center justify-between gap-6 px-6 py-3 rounded-full bg-black/80 backdrop-blur-xl border border-white/10 shadow-xl">
           {navLinks.map((link) => (
@@ -93,7 +88,6 @@ export function Navbar() {
             >
               {link.icon}
 
-              {/* Active Indicator */}
               {active === link.id && (
                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-yellow-400 rounded-full" />
               )}
