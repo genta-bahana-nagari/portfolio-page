@@ -35,26 +35,30 @@ export function Navbar() {
   };
 
   useEffect(() => {
-    const sections = navLinks.map((link) => document.getElementById(link.id));
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: "-40% 0px -40% 0px",
-      },
-    );
+      let currentSection = "home";
 
-    sections.forEach((section) => {
-      if (section) observer.observe(section);
-    });
+      navLinks.forEach((link) => {
+        const section = document.getElementById(link.id);
+        if (!section) return;
 
-    return () => observer.disconnect();
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+
+        if (scrollPosition >= top && scrollPosition < bottom) {
+          currentSection = link.id;
+        }
+      });
+
+      setActive(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

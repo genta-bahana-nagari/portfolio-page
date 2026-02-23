@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="bg-black text-white scroll-mt-24 py-14 pt-20">
+    <section id="about" className="bg-black text-white scroll-mt-24 py-14">
       <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-8 lg:px-12 items-center"
         initial={{ opacity: 0, y: 50 }}
@@ -19,7 +19,7 @@ export function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center max-w-xl mx-auto md:mx-0"
         >
-          <h3 className="text-2xl md:text-4xl mb-10 text-white/90">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-10">
           About Me
           </h3>
           <p className="text-sm md:text-base lg:text-lg leading-relaxed text-white/90">
