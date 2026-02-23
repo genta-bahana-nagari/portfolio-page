@@ -95,7 +95,7 @@ export function Hero() {
               whileTap={{ scale: 0.97 }}
               className="px-6 py-3 rounded-full text-sm font-semibold bg-white text-black hover:bg-gray-300 transition"
             >
-              Checkout My CV
+              Download CV
             </motion.a>
           </div>
         </div>
