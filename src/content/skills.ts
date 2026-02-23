@@ -7,7 +7,6 @@ export const skillCategories = [
     skills: [
       { name: "React", icon: "react" },
       { name: "Next.js", icon: "nextjs" },
-      { name: "Vue.js", icon: "vue" },
       { name: "Nuxt 3", icon: "nuxt" },
       { name: "Bootstrap", icon: "bootstrap" },
       { name: "Tailwind CSS", icon: "tailwind" },
