@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="bg-black text-white scroll-mt-24 py-16">
+    <section id="about" className="bg-black text-white scroll-mt-18 py-16">
       <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-8 lg:px-12 items-center"
         initial={{ opacity: 0, y: 50 }}
@@ -28,7 +28,7 @@ export function About() {
               Vocational High School student
             </span>{" "}
             from Yogyakarta, Indonesia. Passionate about learning and adapting
-            to new challenges. I am currently an{" "}
+            to new challenges. I'm currently an{" "}
             <span className="text-yellow-400 font-semibold">
               intern student as Fullstack Engineer
             </span>
@@ -55,7 +55,7 @@ export function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="relative h-80 w-60 md:h-[36rem] md:w-[24rem] lg:h-[32rem] lg:w-[24rem] rounded-3xl overflow-hidden">
+          <div className="relative h-80 w-60 md:h-[36rem] md:w-[24rem] lg:h-[32rem] lg:w-[24rem] rounded-2xl overflow-hidden">
             <Image
               src="/images/profile_3.jpg"
               alt="Profile"
@@ -74,7 +74,7 @@ export function About() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div
-          className="w-24 sm:w-36 h-1 bg-white rounded-full mb-4 mx-auto"
+          className="w-30 sm:w-36 h-1 bg-white rounded-full mb-4 mx-auto"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8 }}
@@ -85,7 +85,7 @@ export function About() {
         </h2>
 
         <motion.div
-          className="w-24 sm:w-36 h-1 bg-white rounded-full mt-4 mx-auto"
+          className="w-30 sm:w-36 h-1 bg-white rounded-full mt-4 mx-auto"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
