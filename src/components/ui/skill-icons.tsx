@@ -2,6 +2,7 @@
 
 import { FaReact, FaNodeJs, FaBootstrap, FaLinux } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
+import { IoLogoVue } from "react-icons/io5";
 import { SiNuxtdotjs, SiTailwindcss, SiPrisma, SiLaravel } from "react-icons/si";
 import { FaGitAlt, FaDocker, } from "react-icons/fa";
 import { SiNginx, SiMariadb, SiCisco, SiMikrotik, SiCloudflare, SiApache, SiArduino, SiRaspberrypi, SiPostman, SiFigma, SiFirebase, SiMysql } from "react-icons/si";
@@ -9,6 +10,7 @@ import { SiNginx, SiMariadb, SiCisco, SiMikrotik, SiCloudflare, SiApache, SiArdu
 export const iconMap = {
   react: <FaReact className="text-cyan-400" />,
   nextjs: <TbBrandNextjs className="text-white" />,
+  vue: <IoLogoVue className="text-green-400" />,
   nuxt: <SiNuxtdotjs className="text-green-300" />,
   bootstrap: <FaBootstrap className="text-purple-600" />,
   tailwind: <SiTailwindcss className="text-blue-400" />,
