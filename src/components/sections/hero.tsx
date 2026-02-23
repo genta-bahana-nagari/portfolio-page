@@ -79,12 +79,12 @@ export function Hero() {
           {/* CTA Buttons */}
           <div className="py-10 flex flex-wrap justify-center gap-3 md:gap-4">
             <motion.a
-              href="#resume"
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               className="px-6 py-3 rounded-full text-sm font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition"
             >
-              See My Resume
+              Contact Me
             </motion.a>
 
             <motion.a
