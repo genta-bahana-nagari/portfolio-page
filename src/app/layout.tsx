@@ -1,5 +1,5 @@
 import "./globals.css";
-import { siteConfig } from "@/lib/site"
+import { siteConfig } from "@/lib/site";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Metadata } from "next";
@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 
   title: {
     default: "Genta Bahana Nagari",
-    template: "%s | Genta Bahana Nagari",
+    template: "Genta Bahana Nagari",
+  },
+
+  icons: {
+    icon: "/icon.png",
   },
 
   description:
@@ -37,21 +41,20 @@ export const metadata: Metadata = {
     description:
       "Modern fullstack developer portfolio built with Next.js and TypeScript.",
 
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Genta Bahana Nagari Portfolio",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/og-image.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Genta Bahana Nagari Portfolio",
+    //   },
+    // ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Genta Bahana Nagari | Fullstack Developer",
-    description:
-      "Modern fullstack developer portfolio built with Next.js.",
+    description: "Modern fullstack developer portfolio built with Next.js.",
     images: ["/og-image.png"],
     creator: "@yourtwitterhandle",
   },
@@ -60,7 +63,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-}
+};
 
 export default function RootLayout({
   children,
