@@ -11,13 +11,15 @@ export function Skills() {
   const current = skillCategories[selectedCategory];
 
   return (
-    <section id="skills" className="bg-black text-white scroll-mt-24 py-14 pt-20"
+    <section
+      id="skills"
+      className="bg-black text-white scroll-mt-4 md:scroll-mt-24 py-14 pt-24"
     >
       <div className="text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">My Skills</h2>
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-5 md:mb-10">My Skills</h3>
       </div>
 
-      <div className="flex justify-center flex-wrap gap-4 mb-8 px-4">
+      <div className="flex justify-center flex-wrap gap-3 md:gap-4 mb-8 px-4">
         {skillCategories.map((cat, idx) => (
           <SkillTab
             key={idx}
@@ -38,9 +40,7 @@ export function Skills() {
           className="max-w-6xl mx-auto p-4 text-center"
         >
           <h3 className="text-2xl font-semibold mb-4">{current.title}</h3>
-          <p className="text-gray-300 md:text-lg mb-6">
-            {current.description}
-          </p>
+          <p className="text-gray-300 md:text-lg mb-6">{current.description}</p>
 
           <div className="flex flex-wrap justify-center gap-6">
             {current.skills.map((skill, i) => (

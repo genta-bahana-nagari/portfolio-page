@@ -13,7 +13,7 @@ export function SkillItem({ icon, name }) {
       <div className="text-3xl md:text-4xl lg:text-5xl group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">
         {iconMap[icon]}
       </div>
-      <p className="mt-2 text-sm md:text-base font-medium text-gray-200">
+      <p className="mt-2 text-sm font-light md:text-base md:font-medium text-gray-200">
         {name}
       </p>
     </motion.div>

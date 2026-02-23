@@ -30,7 +30,7 @@ export function Hero() {
         transition={{ duration: 1 }}
       >
         {/* Profile Image */}
-        <div className="relative w-42 h-42 md:w-60 md:h-60 md:w-60 rounded-full overflow-hidden shadow-xl shadow-black/40">
+        <div className="relative w-42 h-42 md:w-60 md:h-60 md:w-60 rounded-full overflow-hidden shadow-xl shadow-black/40 md:py-4">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -53,7 +53,7 @@ export function Hero() {
 
         {/* Text */}
         <div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold md:py-4">
             Hi, I'm{" "}
             <span className="text-yellow-400">
               <Typewriter
@@ -68,7 +68,7 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 max-w-4xl mx-auto text-base sm:text-sm md:text-lg text-white/80">
+          <p className="mt-4 max-w-4xl mx-auto text-base sm:text-sm md:text-lg text-white/80 md:py-4">
             A <span className="text-yellow-400">Developer</span> who loves
             crafting software, passionate about <span className="text-yellow-400">System and Network Infrastructure</span>,{" "} and a{" "}
             <span className="text-yellow-400">Culture Enthusiast</span> with
@@ -77,14 +77,14 @@ export function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="py-10 flex flex-wrap justify-center gap-3 md:gap-4">
             <motion.a
-              href="#resume"
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               className="px-6 py-3 rounded-full text-sm font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition"
             >
-              See My Resume
+              Contact Me
             </motion.a>
 
             <motion.a
@@ -96,15 +96,6 @@ export function Hero() {
               className="px-6 py-3 rounded-full text-sm font-semibold bg-white text-black hover:bg-gray-300 transition"
             >
               Checkout My CV
-            </motion.a>
-
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="px-6 py-3 rounded-full text-sm font-semibold border border-white text-white hover:bg-white hover:text-black transition"
-            >
-              Contact Me
             </motion.a>
           </div>
         </div>
