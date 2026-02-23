@@ -35,36 +35,29 @@ export function Navbar() {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
 
-      let currentSection = "home";
+    navLinks.forEach((link) => {
+      const section = document.getElementById(link.id);
+      if (section) observer.observe(section);
+    });
 
-      navLinks.forEach((link) => {
-        const section = document.getElementById(link.id);
-        if (!section) return;
-
-        const top = section.offsetTop;
-        const bottom = top + section.offsetHeight;
-
-        if (scrollPosition >= top && scrollPosition < bottom) {
-          currentSection = link.id;
-        }
-      });
-
-      setActive(currentSection);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
       {/* Desktop Floating Capsule */}
-      <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-50">
+      <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-10">
         <nav className="flex items-center gap-8 px-12 py-5 rounded-full bg-black/70 backdrop-blur-lg border border-white/10 shadow-lg">
           {navLinks.map((link) => (
             <button
@@ -88,7 +81,7 @@ export function Navbar() {
       </div>
 
       {/* Mobile Bottom Dock */}
-      <div className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-50">
+      <div className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-10">
         <nav className="flex items-center justify-between gap-6 px-6 py-3 rounded-full bg-black/80 backdrop-blur-xl border border-white/10 shadow-xl">
           {navLinks.map((link) => (
             <button
