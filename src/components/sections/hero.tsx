@@ -68,13 +68,13 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 max-w-4xl mx-auto text-base sm:text-sm md:text-lg text-white/80 md:py-4">
-            A <span className="text-yellow-400">Developer</span> who loves
+          <p className="mt-4 max-w-4xl mx-auto text-sm md:text-base lg:text-lg leading-relaxed text-white/80 md:py-4">
+            A <span className="text-yellow-400 font-semibold">Developer</span> who loves
             crafting software, passionate about{" "}
-            <span className="text-yellow-400">
+            <span className="text-yellow-400 font-semibold">
               System and Network Infrastructure
             </span>
-            , and a <span className="text-yellow-400">Culture Enthusiast</span>{" "}
+            , and a <span className="text-yellow-400 font-semibold">Culture Enthusiast</span>{" "}
             with deep love for arts — especially karawitan, musical theater, and
             orchestra.
           </p>
