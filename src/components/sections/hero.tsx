@@ -1,5 +1,6 @@
 "use client";
-
+import { FaGithub, FaLinkedin, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
+import { links } from "@/lib/links";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -98,6 +99,61 @@ export function Hero() {
               Download CV
             </motion.a>
           </div>
+        </div>
+
+        <div className="flex flex-row items-center gap-8 text-sm text-white/60">
+          {links.github && (
+            <a
+              href={links.github}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="h-5 w-5" />
+            </a>
+          )}
+
+          {links.linkedin && (
+            <a
+              href={links.linkedin}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="h-5 w-5" />
+            </a>
+          )}
+
+          {links.email && (
+            <a
+              href={links.email}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+            >
+              <FaEnvelope className="h-5 w-5" />
+            </a>
+          )}
+
+          {links.instagram && (
+            <a
+              href={links.instagram}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="h-5 w-5" />
+            </a>
+          )}
+
+          {links.discord && (
+            <a
+              href={links.discord}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDiscord className="h-5 w-5" />
+            </a>
+          )}
         </div>
       </motion.div>
     </section>
