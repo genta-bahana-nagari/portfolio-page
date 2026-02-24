@@ -1,7 +1,6 @@
-import { Footer } from "@/components/layout/footer";
 import { siteConfig } from "@/lib/site";
 import { Metadata } from "next";
-import "./globals.css"
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url || ""),
@@ -71,9 +70,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {children}
-        <Footer />
+      <body className="min-h-screen bg-black flex flex-col">
+        <div className="flex-1">{children}</div> 
       </body>
     </html>
   );
