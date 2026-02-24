@@ -3,58 +3,11 @@
 import ResumeTabs from "@/components/ui/resume/resume-tab";
 import {
   experiences,
-  projects,
   certifications,
 } from "@/content/resume/resumes";
 
 export function Resume() {
   const tabs = [
-    {
-      label: "Projects",
-      content: (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((proj, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-900 rounded-2xl shadow-lg overflow-hidden flex flex-col"
-            >
-              {proj.image && (
-                <img
-                  src={proj.image}
-                  alt={proj.name}
-                  className="h-40 w-full object-cover"
-                />
-              )}
-              <div className="p-4 flex flex-col flex-1">
-                <h3 className="text-xl font-semibold mb-1">{proj.name}</h3>
-                <p className="text-gray-300 text-sm mb-2">{proj.description}</p>
-                <p className="text-gray-400 text-xs mb-2">{proj.techStack}</p>
-                <div className="mt-auto flex gap-2">
-                  {proj.github && (
-                    <a
-                      href={proj.github}
-                      target="_blank"
-                      className="text-blue-400 hover:underline"
-                    >
-                      GitHub
-                    </a>
-                  )}
-                  {proj.preview && (
-                    <a
-                      href={proj.preview}
-                      target="_blank"
-                      className="text-green-400 hover:underline"
-                    >
-                      Preview
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      ),
-    },
     {
       label: "Experience",
       content: (
