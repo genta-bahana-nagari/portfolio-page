@@ -7,7 +7,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center md:max-h-screen px-6 bg-black text-white text-center pt-12"
+      className="flex flex-col items-center min-h-screen px-6 bg-black text-white pt-12"
     >
       <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-8 lg:px-12 items-center"
