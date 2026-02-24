@@ -38,7 +38,11 @@ export function Resume() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="text-sm md:text-base lg:text-lg leading-relaxed text-white/90 mb-8"
           >
-            Building software, systems, and real-world experience.
+            I learn — craft modern, high-performance web applications and
+            scalable systems, blending practical experience with passion. From
+            collaborating on real-world projects to building for practice, I
+            bring both technical expertise and a growth mindset — always focused
+            on delivering value and creating meaningful impact.
           </motion.p>
         </div>
       </div>
