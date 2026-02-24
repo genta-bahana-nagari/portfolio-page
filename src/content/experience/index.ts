@@ -1,10 +1,17 @@
 export const experiences = [
   {
-    title: "Full Stack Engineer Intern",
+    title: "Full Stack Engineer - Intern",
     company: "PT Gamatechno Indonesia",
     period: "2025-Present",
     description: "Worked with clients to build and maintain websites, focusing on performance and accessibility.",
     logo: "/icons/Gamatechno.jpg",
+  },
+  {
+    title: "Frontend & Backend Developer - Apprenticeship",
+    company: "DBS Foundation & Coding Camp",
+    period: "2025",
+    description: "Completed an intensive full-stack apprenticeship, working on real-world team projects and serving as backend developer for the capstone project.",
+    logo: "/icons/coding-camp.jpeg",
   },
   {
     title: "Active Performer & Public Relation Officer",
