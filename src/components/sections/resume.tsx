@@ -20,7 +20,7 @@ export function Resume() {
   return (
     <section
       id="resume"
-      className="flex flex-col items-center min-h-screen px-6 bg-black text-white pt-12"
+      className="flex flex-col items-center px-6 bg-black text-white pt-12"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 text-center">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 items-center">
