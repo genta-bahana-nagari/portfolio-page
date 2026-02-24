@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center min-h-screen px-6 bg-black text-white text-center"
+      className="flex flex-col items-center justify-center max-h-screen px-6 bg-black text-white text-center md:pt-12"
     >
       <motion.div
         className="flex flex-col items-center gap-8"
@@ -29,7 +29,6 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {/* Profile Image */}
         <div className="relative w-42 h-42 md:w-60 md:h-60 md:w-60 rounded-full overflow-hidden shadow-xl shadow-black/40 md:py-4">
           <AnimatePresence mode="wait">
             <motion.div
@@ -51,7 +50,6 @@ export function Hero() {
           </AnimatePresence>
         </div>
 
-        {/* Text */}
         <div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold md:py-4">
             Hi, I'm{" "}
@@ -70,13 +68,15 @@ export function Hero() {
 
           <p className="mt-4 max-w-4xl mx-auto text-base sm:text-sm md:text-lg text-white/80 md:py-4">
             A <span className="text-yellow-400">Developer</span> who loves
-            crafting software, passionate about <span className="text-yellow-400">System and Network Infrastructure</span>,{" "} and a{" "}
-            <span className="text-yellow-400">Culture Enthusiast</span> with
-            deep love for arts — especially karawitan, musical theater, and
+            crafting software, passionate about{" "}
+            <span className="text-yellow-400">
+              System and Network Infrastructure
+            </span>
+            , and a <span className="text-yellow-400">Culture Enthusiast</span>{" "}
+            with deep love for arts — especially karawitan, musical theater, and
             orchestra.
           </p>
 
-          {/* CTA Buttons */}
           <div className="py-10 flex flex-wrap justify-center gap-3 md:gap-4">
             <motion.a
               href="#contact"
