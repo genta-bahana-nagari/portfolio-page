@@ -1,4 +1,4 @@
-# ⚠️ Warning: This Project is No Longer Maintained
+# ⚠️ Warning: This Branch is No Longer Maintained
 
 > **Note:** Code in this branch is no longer actively maintained. It may contain outdated dependencies or unsupported features. Use at your own risk. It's highly recommended to check and use the main branch.
 
