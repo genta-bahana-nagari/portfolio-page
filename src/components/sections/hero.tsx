@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center min-h-screen px-6 bg-black text-white text-center"
+      className="flex flex-col items-center justify-center max-h-screen px-6 bg-black text-white text-center md:pt-12"
     >
       <motion.div
         className="flex flex-col items-center gap-8"
@@ -70,9 +70,12 @@ export function Hero() {
 
           <p className="mt-4 max-w-4xl mx-auto text-base sm:text-sm md:text-lg text-white/80 md:py-4">
             A <span className="text-yellow-400">Developer</span> who loves
-            crafting software, passionate about <span className="text-yellow-400">System and Network Infrastructure</span>,{" "} and a{" "}
-            <span className="text-yellow-400">Culture Enthusiast</span> with
-            deep love for arts — especially karawitan, musical theater, and
+            crafting software, passionate about{" "}
+            <span className="text-yellow-400">
+              System and Network Infrastructure
+            </span>
+            , and a <span className="text-yellow-400">Culture Enthusiast</span>{" "}
+            with deep love for arts — especially karawitan, musical theater, and
             orchestra.
           </p>
 

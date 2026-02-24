@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="bg-black text-white scroll-mt-4 md:scroll-mt-24 md:pt-18 py-14">
+    <section
+      id="about"
+      className="flex flex-col items-center justify-center max-h-screen px-6 bg-black text-white text-center pt-12"
+    >
       <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-8 lg:px-12 items-center"
         initial={{ opacity: 0, y: 50 }}
@@ -20,7 +23,7 @@ export function About() {
           className="text-center max-w-xl mx-auto md:mx-0"
         >
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-5 md:mb-10">
-          About Me
+            About Me
           </h3>
           <p className="text-sm md:text-base lg:text-lg leading-relaxed text-white/90">
             I'm a dedicated{" "}
@@ -29,8 +32,10 @@ export function About() {
             </span>{" "}
             from Yogyakarta, Indonesia. Passionate about learning and adapting
             to new challenges. I'm currently an{" "}
+            <span className="text-yellow-400 font-semibold">intern</span>{" "}
+            student as{" "}
             <span className="text-yellow-400 font-semibold">
-              intern student as Fullstack Engineer
+              Fullstack Engineer
             </span>
             , gaining real-world experience while expanding my skill set.
             <br />
@@ -46,6 +51,17 @@ export function About() {
             </span>
             , and love solving complex problems, collaborating with teams, and
             delivering valuable solutions.
+            <br />
+            <br />
+            Beyond tech, I am also a{" "}
+            <span className="text-yellow-400 font-semibold">
+              culture enthusiast
+            </span>{" "}
+            with a deep love for the arts — especially{" "}
+            <span className="text-yellow-400 font-semibold">
+              karawitan, musical theater, and orchestra
+            </span>
+            .
           </p>
         </motion.div>
 
