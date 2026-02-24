@@ -1,4 +1,11 @@
+# ⚠️ Warning: This Project is No Longer Maintained
+
+> **Note:** Code in this branch is no longer actively maintained. It may contain outdated dependencies or unsupported features. Use at your own risk. It's highly recommended to check and use the main branch.
+
+---
+
 # Personal Portfolio
+
 
 ## 🚀 About the Project
 
@@ -10,7 +17,6 @@ This is my personal portfolio website built using **React, Vite, and Tailwind CS
 
 - **Frontend:** React, Vite, Tailwind CSS
 - **Deployment:** Vercel / Netlify / GitHub Pages / Cloud VPS (with npm run build method for deployment)
-- **Live Demo:** [gentabahana.me](https://gentabahana.me/)
 
 ---
 
