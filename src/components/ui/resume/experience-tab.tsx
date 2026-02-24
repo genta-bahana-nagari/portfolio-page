@@ -1,3 +1,4 @@
+"use client";
 import { experiences } from "@/content/experience/index";
 import { motion } from "framer-motion";
 
