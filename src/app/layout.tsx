@@ -39,14 +39,14 @@ export const metadata: Metadata = {
     description:
       "Modern fullstack developer portfolio built with Next.js and TypeScript.",
 
-    // images: [
-    //   {
-    //     url: "/og-image.png",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Genta Bahana Nagari Portfolio",
-    //   },
-    // ],
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Genta Bahana Nagari Portfolio",
+      },
+    ],
   },
 
   twitter: {
