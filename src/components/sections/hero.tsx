@@ -1,6 +1,7 @@
 "use client";
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
 import { links } from "@/lib/links";
+import { document } from "@/lib/document";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -89,7 +90,7 @@ export function Hero() {
             </motion.a>
 
             <motion.a
-              href={process.env.NEXT_PUBLIC_CV_LINK}
+              href={document.cv}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
