@@ -7,7 +7,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center max-h-screen px-6 bg-black text-white text-center pt-12"
+      className="flex flex-col items-center justify-center md:max-h-screen px-6 bg-black text-white text-center pt-12"
     >
       <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-8 lg:px-12 items-center"
@@ -82,31 +82,33 @@ export function About() {
         </motion.div>
       </motion.div>
 
-      <motion.div
-        className="container mx-auto text-center mt-20 px-6"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
+      <div className="py-6">
         <motion.div
-          className="w-30 sm:w-36 h-1 bg-white rounded-full mb-4 mx-auto"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8 }}
-        />
+          className="container mx-auto text-center mt-20 px-6"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="w-30 sm:w-36 h-1 bg-white rounded-full mb-4 mx-auto"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8 }}
+          />
 
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-serif italic font-bold">
-          "Help me to do it myself"
-        </h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif italic font-bold">
+            "Help me to do it myself"
+          </h2>
 
-        <motion.div
-          className="w-30 sm:w-36 h-1 bg-white rounded-full mt-4 mx-auto"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        />
-      </motion.div>
+          <motion.div
+            className="w-30 sm:w-36 h-1 bg-white rounded-full mt-4 mx-auto"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }

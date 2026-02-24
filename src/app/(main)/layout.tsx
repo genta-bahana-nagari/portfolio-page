@@ -9,9 +9,11 @@ export default function RootLayout({
   const is404 = (children as any)?.type?.name === "NotFound";
   return (
     <>
+    <body className="min-h-screen flex flex-col bg-black">
       {!is404 && <Navbar />}
       <main className="bg-black pt-24 md:pt-32">{children}</main>
       <Footer />
+    </body>
     </>
   );
 }

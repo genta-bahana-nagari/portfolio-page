@@ -39,7 +39,7 @@ export function Navbar() {
         </nav>
       </div>
 
-      <div className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-10">
+      <div className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-10">
         <nav className="flex items-center justify-between gap-6 px-6 py-3 rounded-full bg-black/80 backdrop-blur-xl border border-white/10 shadow-xl">
           {navLinks.map((link) => (
             <Link

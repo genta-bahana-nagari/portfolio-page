@@ -29,7 +29,6 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {/* Profile Image */}
         <div className="relative w-42 h-42 md:w-60 md:h-60 md:w-60 rounded-full overflow-hidden shadow-xl shadow-black/40 md:py-4">
           <AnimatePresence mode="wait">
             <motion.div
@@ -51,7 +50,6 @@ export function Hero() {
           </AnimatePresence>
         </div>
 
-        {/* Text */}
         <div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold md:py-4">
             Hi, I'm{" "}
@@ -79,7 +77,6 @@ export function Hero() {
             orchestra.
           </p>
 
-          {/* CTA Buttons */}
           <div className="py-10 flex flex-wrap justify-center gap-3 md:gap-4">
             <motion.a
               href="#contact"
