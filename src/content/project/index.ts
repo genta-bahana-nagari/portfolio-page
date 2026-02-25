@@ -11,7 +11,7 @@ export const projects = [
   {
     name: "Useless Facts Club",
     category: "Side Project",
-    desc: "A fun space for sharing and discovering useless facts, built with Next.js, Tailwind, and Postgres.",
+    description: "A fun space for sharing and discovering useless facts, built with Next.js, Tailwind, and Postgres.",
     techStack: ["Next.js, Node.js, PostgreSQL"],
     github: "https://github.com/genta-bahana-nagari/useless-facts-club",
     preview: "https://useless-facts-club.vercel.app/",
@@ -20,7 +20,7 @@ export const projects = [
   {
     name: "SIJA Phone",
     category: "Learning Project",
-    desc: "Simple group project about Phone Store, featured with RBAC, checkout and shipping feature.",
+    description: "Simple group project about Phone Store, featured with RBAC, checkout and shipping feature.",
     techStack: ["Laravel, PHP, MySQL"],
     github: "https://github.com/genta-bahana-nagari/phone_store",
     preview: "https://sijaphone.gentabahana.me",
@@ -29,7 +29,7 @@ export const projects = [
   {
     name: "Safewalk",
     category: "Learning Project",
-    desc: "IoT-based safety stick to help blind people navigate safely. Built with NodeMCU and HCSR04 sensors with calibrated accuracy.",
+    description: "IoT-based safety stick to help blind people navigate safely. Built with NodeMCU and HCSR04 sensors with calibrated accuracy.",
     techStack: ["C++, NodeMCU"],
     github: "https://github.com/genta-bahana-nagari/safewalk-project",
     preview: null,
@@ -38,16 +38,16 @@ export const projects = [
   {
     name: "Inventory System",
     category: "Learning Project",
-    desc: "Laravel based inventory system with high reliability and data accuracy.",
+    description: "Basic inventory system with high reliability and data accuracy.",
     techStack: ["Laravel, PHP, MySQL"],
     github: "https://github.com/genta-bahana-nagari/sinvent24",
-    preview: null,
+    preview: "https://sinvent.gentabahana.me",
     image: "https://example.com",
   },
   {
     name: "ESP32 Camera",
     category: "Learning Project",
-    desc: "Built for P5 school event. Perfect combination of price-friendly components and innovations.",
+    description: "Built for P5 school event. Perfect combination of price-friendly components and innovations.",
     techStack: ["C++, NodeMCU"],
     github: "https://github.com/genta-bahana-nagari/ESP32_Cam_Servo",
     preview: null,

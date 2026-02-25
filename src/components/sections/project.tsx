@@ -29,9 +29,9 @@ export function Project() {
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="border border-gray-900 rounded-sm overflow-hidden shadow-lg flex flex-col transition delay-100 duration-300 ease-in-out cursor-pointer"
+              className="max-w-lg border border-gray-900 rounded-sm overflow-hidden shadow-lg flex flex-col transition delay-100 duration-300 ease-in-out cursor-pointer"
             >
               <div className="relative flex flex-col h-full">
                 {project.image && (
@@ -56,38 +56,36 @@ export function Project() {
                     {project.description}
                   </p>
 
-                  <div className="flex flex-col gap-4">
-                    <div className="mt-auto flex flex-wrap justify-between items-center gap-4">
-                      <div className="flex flex-cols gap-3">
-                        {project.techStack[0].split(", ").map((tech, i) => (
-                          <span
-                            key={i}
-                            className="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-md"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="flex flex-cols gap-4">
-                        {project.preview && (
-                          <a
-                            href={project.preview}
-                            target="_blank"
-                            className="text-white hover:text-gray-300 transition"
-                          >
-                            <CgScreen className="h-5 w-5" />
-                          </a>
-                        )}
-                        {project.github && (
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            className="text-white hover:text-gray-300 transition"
-                          >
-                            <FaGithub className="h-5 w-5" />
-                          </a>
-                        )}
-                      </div>
+                  <div className="mt-auto flex flex-wrap justify-between items-center gap-4">
+                    <div className="flex flex-cols gap-3">
+                      {project.techStack[0].split(", ").map((tech, i) => (
+                        <span
+                          key={i}
+                          className="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-md"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex flex-cols gap-4">
+                      {project.preview && (
+                        <a
+                          href={project.preview}
+                          target="_blank"
+                          className="text-white hover:text-gray-300 transition"
+                        >
+                          <CgScreen className="h-5 w-5" />
+                        </a>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          className="text-white hover:text-gray-300 transition"
+                        >
+                          <FaGithub className="h-5 w-5" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
