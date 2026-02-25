@@ -27,9 +27,11 @@ export function Project() {
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="border border-gray-900 rounded-sm overflow-hidden shadow-lg flex flex-col"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="border border-gray-900 rounded-sm overflow-hidden shadow-lg flex flex-col transition delay-100 duration-300 ease-in-out cursor-pointer"
             >
               <div className="relative flex flex-col h-full">
                 {project.image && (
@@ -60,7 +62,7 @@ export function Project() {
                         {project.techStack[0].split(", ").map((tech, i) => (
                           <span
                             key={i}
-                            className="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full"
+                            className="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-md"
                           >
                             {tech}
                           </span>
@@ -90,7 +92,7 @@ export function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>
