@@ -23,7 +23,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center px-6 bg-black text-white text-center md:pt-12"
+      className="flex flex-col items-center justify-center px-6 bg-black text-white text-center mb-12 md:mb-0 md:pt-12"
     >
       <motion.div
         className="flex flex-col items-center gap-8"

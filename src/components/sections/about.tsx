@@ -71,7 +71,7 @@ export function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="relative h-80 w-60 md:h-[36rem] md:w-[24rem] lg:h-[32rem] lg:w-[24rem] rounded-2xl overflow-hidden">
+          <div className="relative h-80 w-60 md:h-[36rem] md:w-[24rem] lg:h-[32rem] lg:w-[24rem] rounded-2xl overflow-hidden cursor-pointer">
             <Image
               src="/images/profile_3.jpg"
               alt="Profile"

@@ -7,7 +7,7 @@ export function Project() {
   return (
     <section
       id="project"
-      className="flex flex-col items-center justify-center px-6 bg-black text-white text-center md:pt-12"
+      className="flex flex-col items-center justify-center px-6 bg-black text-white text-center mb-12 md:mb-0 md:pt-12"
     >
       <motion.div
         className="flex flex-col items-center gap-8"
@@ -29,7 +29,7 @@ export function Project() {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="bg-gray-900 rounded-xl overflow-hidden shadow-lg flex flex-col"
+              className="border border-gray-900 rounded-sm overflow-hidden shadow-lg flex flex-col"
             >
               <div className="relative flex flex-col h-full">
                 {project.image && (
@@ -41,45 +41,51 @@ export function Project() {
                     />
 
                     {project.category && (
-                      <span className="absolute top-1 right-1 bg-yellow-400 text-black text-xs px-2 py-1 rounded-md">
+                      <span className="absolute top-1 right-1 bg-white text-black font-semibold text-xs px-2 py-1 rounded-xs">
                         {project.category}
                       </span>
                     )}
                   </div>
                 )}
 
-                <div className="p-4 flex flex-col flex-1 text-start">
+                <div className="p-4 flex flex-col flex-1 gap-1 text-start">
                   <h3 className="font-bold text-lg mb-1">{project.name}</h3>
                   <p className="text-sm text-gray-300 mb-3">
                     {project.description}
                   </p>
 
-                  <div className="mt-auto flex flex-wrap items-center justify-between gap-2">
-                    {project.techStack[0].split(", ").map((tech, i) => (
-                      <span key={i} className="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full">
-                        {tech}
-                      </span>
-                    ))}
-
-                    <div className="flex flex-cols gap-4">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          className="text-white hover:text-gray-300"
-                        >
-                         <FaGithub className="h-5 w-5" />
-                        </a>
-                      )}
-                      {project.preview && (
-                        <a
-                        href={project.preview}
-                        target="_blank"
-                        className="text-white hover:text-gray-300"
-                        >
-                        <CgScreen className="h-5 w-5" />
-                        </a>
-                      )}
+                  <div className="flex flex-col gap-4">
+                    <div className="mt-auto flex flex-wrap justify-between items-center gap-4">
+                      <div className="flex flex-cols gap-3">
+                        {project.techStack[0].split(", ").map((tech, i) => (
+                          <span
+                            key={i}
+                            className="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex flex-cols gap-4">
+                        {project.preview && (
+                          <a
+                            href={project.preview}
+                            target="_blank"
+                            className="text-white hover:text-gray-300 transition"
+                          >
+                            <CgScreen className="h-5 w-5" />
+                          </a>
+                        )}
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            className="text-white hover:text-gray-300 transition"
+                          >
+                            <FaGithub className="h-5 w-5" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
