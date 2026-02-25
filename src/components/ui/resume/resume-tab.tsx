@@ -16,16 +16,17 @@ export default function ResumeTabs({ tabs }: ResumeTabProps) {
 
   return (
     <div className="max-w-6xl mx-auto px-4">
-      <div className="flex flex-wrap gap-4 justify-center mb-8">
+      <div className="flex flex-wrap gap-2 md:gap-4 justify-center mb-12">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
             onClick={() => setActiveIndex(idx)}
-            className={`px-4 py-2 rounded-full font-semibold transition
+            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm sm:text-base font-medium transition border
+              border-gray-600 hover:bg-yellow-400 hover:text-black cursor-pointer
               ${
                 activeIndex === idx
                   ? "bg-yellow-400 text-black shadow-lg"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  : "bg-black text-gray-300 hover:bg-gray-700"
               }`}
           >
             {tab.label}

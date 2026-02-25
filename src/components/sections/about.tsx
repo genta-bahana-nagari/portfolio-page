@@ -7,7 +7,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center md:max-h-screen px-6 bg-black text-white text-center pt-12"
+      className="flex flex-col items-center px-6 bg-black text-white pt-0 mb-12 md:mb-0 md:pt-12"
     >
       <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-8 lg:px-12 items-center"
@@ -71,7 +71,7 @@ export function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="relative h-80 w-60 md:h-[36rem] md:w-[24rem] lg:h-[32rem] lg:w-[24rem] rounded-2xl overflow-hidden">
+          <div className="relative h-80 w-60 md:h-[36rem] md:w-[24rem] lg:h-[32rem] lg:w-[24rem] rounded-2xl overflow-hidden cursor-pointer">
             <Image
               src="/images/profile_3.jpg"
               alt="Profile"

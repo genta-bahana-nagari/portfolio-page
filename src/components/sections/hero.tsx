@@ -1,5 +1,7 @@
 "use client";
-
+import { FaGithub, FaLinkedin, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
+import { links } from "@/lib/links";
+import { document } from "@/lib/document";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,7 +23,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center max-h-screen px-6 bg-black text-white text-center md:pt-12"
+      className="flex flex-col items-center justify-center px-6 bg-black text-white text-center mb-12 md:mb-0 md:pt-12"
     >
       <motion.div
         className="flex flex-col items-center gap-8"
@@ -66,13 +68,13 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 max-w-4xl mx-auto text-base sm:text-sm md:text-lg text-white/80 md:py-4">
-            A <span className="text-yellow-400">Developer</span> who loves
+          <p className="mt-4 max-w-4xl mx-auto text-sm md:text-base lg:text-lg leading-relaxed text-white/80 md:py-4">
+            A <span className="text-yellow-400 font-semibold">Developer</span> who loves
             crafting software, passionate about{" "}
-            <span className="text-yellow-400">
+            <span className="text-yellow-400 font-semibold">
               System and Network Infrastructure
             </span>
-            , and a <span className="text-yellow-400">Culture Enthusiast</span>{" "}
+            , and a <span className="text-yellow-400 font-semibold">Culture Enthusiast</span>{" "}
             with deep love for arts — especially karawitan, musical theater, and
             orchestra.
           </p>
@@ -88,7 +90,7 @@ export function Hero() {
             </motion.a>
 
             <motion.a
-              href={process.env.NEXT_PUBLIC_CV_LINK}
+              href={document.cv}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -98,6 +100,61 @@ export function Hero() {
               Download CV
             </motion.a>
           </div>
+        </div>
+
+        <div className="flex flex-row items-center gap-8 text-sm text-white/60">
+          {links.github && (
+            <a
+              href={links.github}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="h-5 w-5" />
+            </a>
+          )}
+
+          {links.linkedin && (
+            <a
+              href={links.linkedin}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="h-5 w-5" />
+            </a>
+          )}
+
+          {links.email && (
+            <a
+              href={links.email}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+            >
+              <FaEnvelope className="h-5 w-5" />
+            </a>
+          )}
+
+          {links.instagram && (
+            <a
+              href={links.instagram}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="h-5 w-5" />
+            </a>
+          )}
+
+          {links.discord && (
+            <a
+              href={links.discord}
+              className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDiscord className="h-5 w-5" />
+            </a>
+          )}
         </div>
       </motion.div>
     </section>
