@@ -32,18 +32,6 @@ export function Resume() {
           >
             My Resume
           </motion.h3>
-          <motion.p
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-sm md:text-base lg:text-lg leading-relaxed text-white/90 mb-8"
-          >
-            I learn — craft modern, high-performance web applications and
-            scalable systems, blending practical experience with passion. From
-            collaborating on real-world projects to building for practice, I
-            bring both technical expertise and a growth mindset — always focused
-            on delivering value and creating meaningful impact.
-          </motion.p>
         </div>
       </div>
 
