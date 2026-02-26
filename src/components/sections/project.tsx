@@ -31,7 +31,7 @@ export function Project() {
               key={idx}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="max-w-lg border border-gray-900 rounded-sm overflow-hidden shadow-lg flex flex-col transition delay-100 duration-300 ease-in-out cursor-pointer"
+              className="max-w-md border border-gray-900 rounded-sm overflow-hidden shadow-lg flex flex-col transition delay-100 duration-300 ease-in-out cursor-pointer"
             >
               <div className="relative flex flex-col h-full">
                 {project.image && (
@@ -43,7 +43,7 @@ export function Project() {
                     />
 
                     {project.category && (
-                      <span className="absolute top-1 right-1 bg-white text-black font-semibold text-xs px-2 py-1 rounded-xs">
+                      <span className="shadow-xl/30 shadow-black absolute top-1 right-1 bg-white text-black font-semibold text-xs px-2 py-1 rounded-xs">
                         {project.category}
                       </span>
                     )}
