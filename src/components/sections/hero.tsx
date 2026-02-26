@@ -7,7 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
-const images = ["/images/profile_1.jpg", "/images/profile_2.jpg"];
+const images = ["/images/profile/profile_1.jpg", "/images/profile/profile_2.jpg"];
 
 export function Hero() {
   const [index, setIndex] = useState(0);

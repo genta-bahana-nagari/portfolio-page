@@ -1,14 +1,9 @@
 export const certifications = [
   {
-    name: "Certified React Developer",
-    institution: "Udemy",
-    year: "2023",
-    // preview: "https://www.udemy.com/certificate/UC-XXXXXXX/",
-  },
-  {
-    name: "JavaScript Essentials",
-    institution: "Codecademy",
-    year: "2022",
-    // preview: "https://www.codecademy.com/certificates/XXXXXXX",
+    name: "MikroTik Certified Network Associate",
+    institution: "MikroTik",
+    issued_at: "May 2025",
+    preview: "/images/certifications/MTCNA.jpg",
+    link: "https://mikrotik.com/training/certificates/c457176cc550acd385fb",
   },
 ];
