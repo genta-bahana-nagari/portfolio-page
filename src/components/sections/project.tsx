@@ -43,7 +43,7 @@ export function Project() {
                     />
 
                     {project.category && (
-                      <span className="shadow-xl/30 shadow-black absolute top-1 right-1 bg-white text-black font-semibold text-xs px-2 py-1 rounded-xs">
+                      <span className="shadow-xl/50 shadow-black absolute top-1 right-1 bg-white text-black font-semibold text-xs px-2 py-1 rounded-xs">
                         {project.category}
                       </span>
                     )}
