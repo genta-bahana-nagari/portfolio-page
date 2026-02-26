@@ -2,7 +2,8 @@
 import { FaGithub } from "react-icons/fa";
 import { CgScreen } from "react-icons/cg";
 import { projects } from "@/content/project/index";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+
 export function Project() {
   return (
     <section
@@ -35,7 +36,7 @@ export function Project() {
             >
               <div className="relative flex flex-col h-full">
                 {project.image && (
-                  <div className="relative w-full h-48">
+                  <div className="relative w-full h-54">
                     <img
                       src={project.image}
                       alt={project.name}

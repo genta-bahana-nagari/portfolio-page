@@ -6,7 +6,7 @@ export const projects = [
     techStack: ["Next.js, Node.js, PostgreSQL"],
     github: "https://github.com/genta-bahana-nagari/useless-facts-club",
     preview: null,
-    image: "/images/Facts_Club.png",
+    image: "/images/projects/Facts_Club.png",
   },
   {
     name: "SIJA Phone",
@@ -15,7 +15,7 @@ export const projects = [
     techStack: ["Laravel, PHP, MySQL"],
     github: "https://github.com/genta-bahana-nagari/phone_store",
     preview: null,
-    image: "/images/SIJA_Phone.png",
+    image: "/images/projects/SIJA_Phone.png",
   },
   {
     name: "Safewalk",
@@ -24,7 +24,7 @@ export const projects = [
     techStack: ["C++, NodeMCU"],
     github: "https://github.com/genta-bahana-nagari/safewalk-project",
     preview: null,
-    image: "/images/Safe_Walk.jpg",
+    image: "/images/projects/Safe_Walk.jpg",
   },
   {
     name: "Inventory System",
@@ -33,7 +33,7 @@ export const projects = [
     techStack: ["Laravel, PHP, MySQL"],
     github: "https://github.com/genta-bahana-nagari/sinvent24",
     preview: null,
-    image: "/images/Inventory_System.png",
+    image: "/images/projects/Inventory_System.png",
   },
   {
     name: "ESP32 Camera",
@@ -42,6 +42,6 @@ export const projects = [
     techStack: ["C++, NodeMCU"],
     github: "https://github.com/genta-bahana-nagari/ESP32_Cam_Servo",
     preview: null,
-    image: "/images/Esp_Cam.jpg",
+    image: "/images/projects/Esp_Cam.jpg",
   },
 ];

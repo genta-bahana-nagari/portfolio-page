@@ -73,7 +73,7 @@ export function About() {
         >
           <div className="relative h-80 w-60 md:h-[36rem] md:w-[24rem] lg:h-[32rem] lg:w-[24rem] rounded-2xl overflow-hidden cursor-pointer">
             <Image
-              src="/images/profile_3.jpg"
+              src="/images/profile/profile_3.jpg"
               alt="Profile"
               fill
               className="object-cover transition-transform duration-300 ease-in-out hover:scale-105"
