@@ -23,10 +23,10 @@ export function Contact() {
 
     emailjs
       .sendForm(
-        email.service_id,
-        email.template_id,
-        form.current,
-        email.public_key,
+        email.service_id ?? "",
+        email.template_id ?? "",
+        form.current ?? "",
+        email.public_key ?? "",
       )
       .then(
         () => {
@@ -145,7 +145,7 @@ export function Contact() {
           </form>
         </motion.div>
       </div>
-      {/* {status && ( */}
+      {status && (
         <motion.div
           className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-15"
           initial={{ opacity: 0 }}
@@ -178,7 +178,7 @@ export function Contact() {
             </button>
           </motion.div>
         </motion.div>
-      {/* )} */}
+      )}
     </section>
   );
 }
