@@ -1,5 +1,5 @@
 "use client";
-
+import { document } from "@/lib/document";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -25,7 +25,7 @@ export function About() {
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-5 md:mb-10">
             About Me
           </h3>
-          <p className="text-sm md:text-base lg:text-lg leading-relaxed text-white/90">
+          <p className="text-sm md:text-base lg:text-lg leading-relaxed text-white/90 mb-5 md:mb-10">
             I'm a dedicated{" "}
             <span className="text-yellow-400 font-semibold">
               Vocational High School student
@@ -63,6 +63,17 @@ export function About() {
             </span>
             .
           </p>
+
+          <motion.a
+            href={document.portfolio}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-block px-6 py-3 rounded-full text-sm font-semibold bg-white text-black hover:bg-gray-300 transition"
+          >
+            More About Me
+          </motion.a>
         </motion.div>
 
         <motion.div

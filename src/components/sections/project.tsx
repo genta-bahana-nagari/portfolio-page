@@ -26,7 +26,13 @@ export function Project() {
             Projects and Stuffs
           </h3>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
@@ -93,7 +99,7 @@ export function Project() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
