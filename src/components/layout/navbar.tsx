@@ -8,7 +8,7 @@ const navLinks = [
   { href: "/", icon: <BiHome />, label: "Home" },
   { href: "/about", icon: <BiUser />, label: "About" },
   { href: "/project", icon: <GoProjectRoadmap />, label: "Projects" },
-  { href: "/resume", icon: <BiBriefcase />, label: "Resume" },
+  { href: "/experience", icon: <BiBriefcase />, label: "Experience" },
   { href: "/contact", icon: <BiEnvelope />, label: "Contact" },
 ];
 

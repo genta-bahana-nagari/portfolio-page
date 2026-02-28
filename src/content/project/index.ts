@@ -20,7 +20,7 @@ export const projects = [
   {
     name: "Safewalk",
     category: "Learning Project",
-    description: "IoT-based safety stick to help blind people navigate safely. Built with NodeMCU and HCSR04 sensors with calibrated accuracy.",
+    description: "IoT-based safety stick to help blind people navigate safely. Built with NodeMCU and HCSR04.",
     techStack: ["C++, NodeMCU"],
     github: "https://github.com/genta-bahana-nagari/safewalk-project",
     preview: null,
@@ -38,7 +38,7 @@ export const projects = [
   {
     name: "ESP32 Camera",
     category: "Learning Project",
-    description: "Built for class showcase in school events. Perfect combination of price-friendly components and innovations.",
+    description: "Made for class showcase in school events. Perfect combination of price-friendly components and innovations.",
     techStack: ["C++, NodeMCU"],
     github: "https://github.com/genta-bahana-nagari/ESP32_Cam_Servo",
     preview: null,

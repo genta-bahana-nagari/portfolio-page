@@ -25,7 +25,7 @@ export default function CertificationTab() {
           </div>
           <div className="p-4 flex flex-col flex-1 gap-1 text-start">
             <h3 className="font-bold text-lg mb-1">{cert.name}</h3>
-            <p className="text-md text-gray-300 my-3">
+            <p className="text-md text-gray-300 my-1">
               {cert.institution}{" "}-{" "}<span>{cert.issued_at}</span>
             </p>
           </div>
