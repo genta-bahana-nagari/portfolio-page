@@ -57,6 +57,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+    <head>
+      <meta name="google-site-verification" content="XzDvITOMp6mu2xH6-diRRrHKG_Ye7_tTL6te0mjQld8" />
+    </head>
       <body className="min-h-screen bg-black flex flex-col">
         <div className="flex-1">{children}</div> 
       </body>
