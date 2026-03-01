@@ -5,7 +5,7 @@ export const projects = [
     description: "A fun space for sharing and discovering useless facts, built with Next.js, Tailwind, and Postgres.",
     techStack: ["Next.js, Node.js, PostgreSQL"],
     github: "https://github.com/genta-bahana-nagari/useless-facts-club",
-    preview: null,
+    preview: "https://useless-facts-club.vercel.app/",
     image: "/images/projects/Facts_Club.png",
   },
   {
