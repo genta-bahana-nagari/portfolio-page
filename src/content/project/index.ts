@@ -2,7 +2,7 @@ export const projects = [
   {
     name: "Useless Facts Club",
     category: "Side Project",
-    description: "A fun space for sharing and discovering useless facts, built with Next.js, Tailwind, and Postgres.",
+    description: "A fun space for sharing and discovering useless facts, giving votes, and check your leaderboard.",
     techStack: ["Next.js, Node.js, PostgreSQL"],
     github: "https://github.com/genta-bahana-nagari/useless-facts-club",
     preview: "https://useless-facts-club.vercel.app/",
@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     name: "SIJA Phone",
-    category: "Learning Project",
+    category: "Group Project",
     description: "Simple group project about Phone Store, featured with RBAC, checkout and shipping feature.",
     techStack: ["Laravel, PHP, MySQL"],
     github: "https://github.com/genta-bahana-nagari/phone_store",
@@ -18,9 +18,18 @@ export const projects = [
     image: "/images/projects/SIJA_Phone.png",
   },
   {
-    name: "Safewalk",
+    name: "SIJA Kerja",
     category: "Learning Project",
-    description: "IoT-based safety stick to help blind people navigate safely. Built with NodeMCU and HCSR04.",
+    description: "This project is based on the theme of Practical Exam, an information system for internship applications.",
+    techStack: ["Laravel, Livewire, PHP, MySQL"],
+    github: "https://github.com/genta-bahana-nagari/sija-kerja",
+    preview: null,
+    image: "/images/projects/SIJA_Kerja.png",
+  },
+  {
+    name: "Safewalk",
+    category: "Group Project",
+    description: "IoT-based safety stick to help blind people navigate safely. Can be customized with integrated Android apps for monitoring.",
     techStack: ["C++, NodeMCU"],
     github: "https://github.com/genta-bahana-nagari/safewalk-project",
     preview: null,
@@ -29,7 +38,7 @@ export const projects = [
   {
     name: "Inventory System",
     category: "Learning Project",
-    description: "Basic inventory system with high reliability and data accuracy.",
+    description: "Basic inventory system with high reliability and data accuracy. Used as my learning fundamental in Laravel.",
     techStack: ["Laravel, PHP, MySQL"],
     github: "https://github.com/genta-bahana-nagari/sinvent24",
     preview: null,
@@ -37,7 +46,7 @@ export const projects = [
   },
   {
     name: "ESP32 Camera",
-    category: "Learning Project",
+    category: "Group Project",
     description: "Made for class showcase in school events. Perfect combination of price-friendly components and innovations.",
     techStack: ["C++, NodeMCU"],
     github: "https://github.com/genta-bahana-nagari/ESP32_Cam_Servo",
