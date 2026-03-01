@@ -1,36 +1,191 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
 
-## Getting Started
+## 🚀 About the Project
 
-First, run the development server:
+This is my personal portfolio website built using **NextJS 16** along with **Tailwind CSS**. It showcases my skills, projects, and experiences in an interactive and modern UI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** NextJS 16, Tailwind
+- **Deployment:** Vercel
+
+---
+
+## ✨ Features
+
+- Fully responsive design with Tailwind CSS
+- Smooth animations and transitions
+- Dynamic project showcase with images and descriptions
+- Contact form integrated with EmailJS for email submissions
+
+---
+
+## 📁 Project Structure
+
+```sh
+ my-portfolio/
+ ├── public/
+ │   ├── icons/
+ │   │   ├── coding-camp.jpeg
+ │   │   ├── Gamatechno.jpg
+ │   │   ├── icon.png
+ │   │   ├── Karawitan-Stembayo.png
+ │   │   └── PAKS-Stembayo.png
+ │   │
+ │   └── images/
+ │       ├── certifications/
+ │       │   └── MTCNA.jpg
+ │       │
+ │       ├── og-image.png
+ │       │
+ │       ├── profile/
+ │       │   ├── profile_1.jpg
+ │       │   ├── profile_2.jpg
+ │       │   └── profile_3.jpg
+ │       │
+ │       └── projects/
+ │           ├── Esp_Cam.jpg
+ │           ├── Facts_Club.png
+ │           ├── Inventory_System.png
+ │           ├── Safe_Walk.jpg
+ │           └── SIJA_Phone.png
+ ├── src/
+ │   ├── app/
+ │   │   ├── page.tsx
+ │   │   ├── layout.tsx
+ │   │   ├── globals.css
+ │   │   ├── not-found.tsx
+ │   │   │
+ │   │   ├── about/
+ │   │   │   └── page.tsx
+ │   │   ├── contact/
+ │   │   │   └── page.tsx
+ │   │   ├── experience/
+ │   │   │   └── page.tsx
+ │   │   ├── project/
+ │   │   │   └── page.tsx
+ │   │   └── profile/
+ │   │       └── page.tsx
+ │   │  
+ │   ├── components/
+ │   │   │
+ │   │   ├── layout/
+ │   │   │   ├── container.tsx
+ │   │   │   ├── footer.tsx
+ │   │   │   └── navbar.tsx
+ │   │   │
+ │   │   ├── sections/
+ │   │   │   ├── about.tsx
+ │   │   │   ├── contact.tsx
+ │   │   │   ├── experience.tsx
+ │   │   │   ├── hero.tsx
+ │   │   │   └── project.tsx
+ │   │   │
+ │   │   └── ui/
+ │   │       └── resume/
+ │   │           ├── resume-tab.tsx
+ │   │           ├── experience-tab.tsx
+ │   │           └── certification-tab.tsx
+ │   │
+ │   ├── content/
+ │   │   ├── certification/
+ │   │   │   └── index.ts
+ │   │   ├── experience/
+ │   │   │   └── index.ts
+ │   │   └── project/
+ │   │       └── index.ts
+ │   └── lib/
+ │       ├── document.ts
+ │       ├── email.ts
+ │       ├── links.ts
+ │       └── site.ts
+ │
+ ├── package.json
+ ├── package-lock.json
+ ├── tsconfig.json
+ ├── next.config.ts
+ ├── postcss.config.mjs
+ ├── eslint.config.mjs
+ └── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Installation & Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run this project locally, follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository:**
 
-## Learn More
+   ```sh
+   git clone https://github.com/genta-bahana-nagari/portfolio-page.git
+   cd portfolio-page
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Set environment:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```sh
+   cp .env.example .env
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   You will see this configuration and adjust them with your keys and links:
 
-## Deploy on Vercel
+   ```sh
+    NEXT_PUBLIC_SITE_URL=your_site_url
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    NEXT_PUBLIC_EMAILJS_SERVICE_ID=
+    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
+    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    NEXT_PUBLIC_CV_LINK='https://drive.google.com/xxxx'
+    NEXT_PUBLIC_PORTFOLIO_LINK='https://drive.google.com/xxxx'
+
+    NEXT_PUBLIC_GITHUB_LINK='https://github.com/xxxxxxxxx'
+    NEXT_PUBLIC_LINKEDIN_LINK='https://www.linkedin.com/in/xxxxxxxxx'
+    NEXT_PUBLIC_INSTAGRAM_LINK='https://instagram.com/xxxxxxxxxxxxxxx'
+    NEXT_PUBLIC_DISCORD_ID='https://discord.com/users/xxxxxxxxxxxxxxxxxx'
+    NEXT_PUBLIC_EMAIL_ADDRESS='mailto:xxxxxxxxxxxxxxxxx@gmail.com'
+   ```
+
+3. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+4. **Run the development server:**
+
+   ```sh
+   npm run dev
+   ```
+
+5. Open http://localhost:3000 in your browser.
+
+---
+
+## 🚀 Deployment
+
+To deploy the project, use one of these services:
+
+- **Vercel:** `vercel --prod`, or you can connect your repo and deploy.
+- **Docker:** config your own Dockerfile along with other related configurations.
+
+---
+
+## 👤 Author
+
+- **Genta Bahana Nagari** – [LinkedIn](https://www.linkedin.com/in/genta-bahana-nagari/) | [GitHub](https://github.com/genta-bahana-nagari)
+
+---
+
+## 🌟 Show Your Support
+
+If you find this script helpful, feel free to ⭐ the repository and share it with others!
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---

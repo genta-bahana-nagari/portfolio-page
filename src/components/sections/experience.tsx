@@ -2,24 +2,24 @@
 
 import ResumeTabs from "@/components/ui/resume/resume-tab";
 import ExperienceTab from "@/components/ui/resume/experience-tab";
-import CertificationTab from "@/components/ui/resume/certification-tab";
+// import CertificationTab from "@/components/ui/resume/certification-tab";
 import { motion } from "framer-motion";
 
-export function Resume() {
+export function Experience() {
   const tabs = [
     {
       label: "Experience",
       content: <ExperienceTab />,
     },
-    {
-      label: "Certification",
-      content: <CertificationTab />,
-    },
+    // {
+    //   label: "Certification",
+    //   content: <CertificationTab />,
+    // },
   ];
 
   return (
     <section
-      id="resume"
+      id="experience"
       className="flex flex-col items-center px-6 bg-black text-white pt-0 mb-12 md:mb-0 md:pt-12"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 text-center">
@@ -30,7 +30,7 @@ export function Resume() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-5 md:mb-10"
           >
-            My Resume
+            My Experience
           </motion.h3>
         </div>
       </div>

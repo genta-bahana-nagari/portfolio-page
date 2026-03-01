@@ -16,7 +16,7 @@ export default function ResumeTabs({ tabs }: ResumeTabProps) {
 
   return (
     <div className="max-w-6xl mx-auto px-4">
-      <div className="flex flex-wrap gap-2 md:gap-4 justify-center mb-12">
+      {/* <div className="flex flex-wrap gap-2 md:gap-4 justify-center mb-12">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
@@ -32,7 +32,7 @@ export default function ResumeTabs({ tabs }: ResumeTabProps) {
             {tab.label}
           </button>
         ))}
-      </div>
+      </div> */}
 
       <AnimatePresence mode="wait">
         <motion.div
