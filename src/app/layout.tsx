@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url || ""),
 
   title: {
-    default: "Genta Bahana Nagari",
-    template: "Genta Bahana Nagari",
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
 
   icons: {
@@ -29,32 +29,19 @@ export const metadata: Metadata = {
 
   creator: "Genta Bahana Nagari",
 
-  openGraph: {
-    type: "website",
-    locale: "en_US",
+   openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
     url: siteConfig.url,
-    siteName: "Genta Portfolio",
-
-    title: "Genta Bahana Nagari | Fullstack Developer",
-    description:
-      "Modern fullstack developer portfolio built with Next.js and TypeScript.",
-
+    siteName: siteConfig.name,
     images: [
       {
-        url: "/images/og-image.png",
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Genta Bahana Nagari Portfolio",
       },
     ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Genta Bahana Nagari | Fullstack Developer",
-    description: "Modern fullstack developer portfolio built with Next.js.",
-    images: ["/og-image.png"],
-    creator: "@yourtwitterhandle",
+    type: "website",
   },
 
   robots: {
