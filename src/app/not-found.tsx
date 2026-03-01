@@ -18,7 +18,7 @@ export default function NotFound() {
             404
           </h1>
 
-          <p className="text-lg sm:text-xl text-white/80 max-w-xl">
+          <p className="text-md md:text-xl text-white/80 max-w-xl">
             Oops! The page you are looking for does not exist.
           </p>
 
@@ -34,7 +34,6 @@ export default function NotFound() {
           </div>
         </motion.div>
       </div>
-      <Footer />
     </section>
   );
 }
