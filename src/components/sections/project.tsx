@@ -26,7 +26,7 @@ export function Project() {
             Projects and Stuffs
           </h3>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,11 +49,18 @@ export function Project() {
                       className="w-full h-full object-cover"
                     />
 
-                    {project.category && (
-                      <span className="shadow-xl/50 shadow-black absolute top-1 right-1 bg-white text-black font-semibold text-xs px-2 py-1 rounded-xs">
-                        {project.category}
-                      </span>
-                    )}
+                    <div className="flex flex-col-gap-3">
+                      {project.category && (
+                        <span className="shadow-xl/50 shadow-black absolute top-1 right-1 bg-white text-black font-semibold text-xs px-2 py-1 rounded-xs">
+                          {project.category}
+                        </span>
+                      )}
+                      {project.status && (
+                        <span className="bg-yellow-400 shadow-xl/50 shadow-black absolute top-1 bg-white text-black font-semibold text-xs px-2 py-1 rounded-xs">
+                          {project.status}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 )}
 
