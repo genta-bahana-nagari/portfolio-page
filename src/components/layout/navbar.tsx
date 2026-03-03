@@ -18,7 +18,7 @@ export function Navbar() {
   return (
     <>
       <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-10">
-        <nav className="flex items-center gap-8 px-12 py-5 rounded-full bg-black/70 backdrop-blur-lg border border-white/10 shadow-lg">
+        <nav className="flex items-center gap-8 px-12 py-5 rounded-full bg-black/70 backdrop-blur-lg border-2 border-gray-800 shadow-lg">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -40,7 +40,7 @@ export function Navbar() {
       </div>
 
       <div className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-10">
-        <nav className="flex items-center justify-between gap-6 px-6 py-3 rounded-full bg-black/80 backdrop-blur-xl border border-white/10 shadow-xl">
+        <nav className="flex items-center justify-between gap-6 px-6 py-3 rounded-full bg-black/80 backdrop-blur-xl border-2 border-gray-800 shadow-xl">
           {navLinks.map((link) => (
             <Link
               key={link.href}
