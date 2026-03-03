@@ -71,18 +71,10 @@ export function Contact() {
 
           <div className="flex flex-col gap-4">
             {[
-              { icon: <FaLinkedin />, link: links.linkedin, label: "LinkedIn" },
-              {
-                icon: <FaInstagram />,
-                link: links.instagram,
-                label: "Instagram",
-              },
               { icon: <FaGithub />, link: links.github, label: "GitHub" },
-              {
-                icon: <FaEnvelope />,
-                link: `mailto:${links.email}`,
-                label: "Email",
-              },
+              { icon: <FaLinkedin />, link: links.linkedin, label: "LinkedIn" },
+              { icon: <FaEnvelope />, link: `mailto:${links.email}`, label: "Email" },
+              { icon: <FaInstagram />, link: links.instagram, label: "Instagram" },
               { icon: <FaDiscord />, link: links.discord, label: "Discord" },
             ].map((social, index) => (
               <motion.a
