@@ -5,13 +5,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url || ""),
 
+  applicationName: siteConfig.name,
+
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
-  },
-
-  icons: {
-    icon: "/icon.png",
   },
 
   description:
@@ -28,8 +26,19 @@ export const metadata: Metadata = {
   authors: [{ name: "Genta Bahana Nagari", url: siteConfig.url }],
 
   creator: "Genta Bahana Nagari",
+  publisher: "Genta Bahana Nagari",
 
-   openGraph: {
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+
+  alternates: {
+    canonical: siteConfig.url,
+  },
+
+  openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
@@ -44,9 +53,23 @@ export const metadata: Metadata = {
     type: "website",
   },
 
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -57,11 +80,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    <head>
-      <meta name="google-site-verification" content="XzDvITOMp6mu2xH6-diRRrHKG_Ye7_tTL6te0mjQld8" />
-    </head>
       <body className="min-h-screen bg-black flex flex-col">
-        <div className="flex-1">{children}</div> 
+        <div className="flex-1">{children}</div>
       </body>
     </html>
   );
