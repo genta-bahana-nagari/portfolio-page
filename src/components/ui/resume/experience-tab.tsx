@@ -4,11 +4,9 @@ import { motion } from "framer-motion";
 
 export default function ExperienceTab() {
   return (
-    <div className="relative flex flex-col gap-10">
-      <div className="absolute left-4 top-6 bottom-6 w-[2px] bg-gray-700" />
+    <div className="relative flex flex-col md:gap-0 lg:gap-4">
       {experiences.map((exp, idx) => (
-        <div key={idx} className="relative gap-2 items-center pl-8 md:pl-12">
-          <div className="absolute left-2 top-6 md:top-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-yellow-400" />
+        <div key={idx} className="relative gap-2 items-center">
           <motion.div
             key={idx}
             className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 p-6 md:p-8 cursor-pointer transition-all duration-300 ease-in-out w-full max-w-4xl mx-auto"
