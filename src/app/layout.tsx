@@ -12,8 +12,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
 
-  description:
-    "Personal portfolio of Genta Bahana Nagari — Fullstack Developer specializing in modern web applications.",
+  description: siteConfig.description,
 
   keywords: [
     "Genta Bahana Nagari",
@@ -23,15 +22,15 @@ export const metadata: Metadata = {
     "Portfolio Website",
   ],
 
-  authors: [{ name: "Genta Bahana Nagari", url: siteConfig.url }],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
 
-  creator: "Genta Bahana Nagari",
-  publisher: "Genta Bahana Nagari",
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
 
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: "/icons/icon.png",
+    shortcut: "/icons/icon.png",
+    apple: "/icons/icon.png",
   },
 
   alternates: {
