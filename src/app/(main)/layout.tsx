@@ -8,10 +8,10 @@ export default function RootLayout({
 }) {
   const is404 = (children as any)?.type?.name === "NotFound";
   return (
-      <div className="min-h-screen flex flex-col bg-black">
-        {!is404 && <Navbar />}
-        <main className="bg-black flex-1 pt-24 md:pt-32">{children}</main>
-        <Footer />
-      </div>
+    <div className="min-h-screen flex flex-col relative z-10">
+      {!is404 && <Navbar />}
+      <main className="flex-1 pt-24 md:pt-32">{children}</main>
+      {!is404 && <Footer />}
+    </div>
   );
 }

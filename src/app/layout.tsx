@@ -1,15 +1,15 @@
 import { siteConfig } from "@/lib/site";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url || ""),
+  metadataBase: new URL(siteConfig.url),
 
-  applicationName: siteConfig.name,
+  applicationName: siteConfig.shortName,
 
   title: {
     default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.shortName}`,
   },
 
   description: siteConfig.description,
@@ -17,26 +17,37 @@ export const metadata: Metadata = {
   keywords: [
     "Genta Bahana Nagari",
     "Fullstack Developer",
-    "Next.js Developer",
     "Frontend Developer Indonesia",
+    "Web Developer Yogyakarta",
     "Portfolio Website",
+    "Freelance Web Developer Indonesia",
   ],
 
-  authors: [{ name: siteConfig.name, url: siteConfig.url }],
-  creator: siteConfig.name,
-  publisher: siteConfig.name,
+  authors: [{ name: siteConfig.shortName, url: siteConfig.url }],
+  creator: siteConfig.shortName,
+  publisher: siteConfig.shortName,
 
-  category: "portfolio",
+  category: "technology",
 
   alternates: {
     canonical: siteConfig.url,
   },
 
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+
+  referrer: "origin-when-cross-origin",
+
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
-    siteName: siteConfig.name,
+    siteName: siteConfig.shortName,
+    locale: siteConfig.locale,
+    type: "website",
     images: [
       {
         url: siteConfig.ogImage,
@@ -45,34 +56,38 @@ export const metadata: Metadata = {
         alt: siteConfig.ogImageAlt,
       },
     ],
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
+    creator: "@gentabahananagari",
     images: [siteConfig.ogImage],
   },
 
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
 
   icons: {
-    icon: [{ url: "/icons/icon.png", type: "image/png" }],
-    shortcut: "/icons/icon.png",
-    apple: "/icons/icon.png",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/favicon-180x180.png", sizes: "180x180" }],
+    shortcut: "/favicon.png",
   },
 
+  manifest: "/manifest.json",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: siteConfig.themeColor,
 };
 
@@ -83,7 +98,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-black flex flex-col">
+      <body className="flex flex-col bg-black text-white relative overflow-x-hidden">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black" />
+        </div>
         <div className="flex-1">{children}</div>
       </body>
     </html>
