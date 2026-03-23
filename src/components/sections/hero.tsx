@@ -87,8 +87,8 @@ export function Hero() {
             <span className="text-yellow-400 font-semibold">
               Culture Enthusiast
             </span>{" "}
-            with deep love for arts — especially karawitan, musical theater, and
-            orchestra.
+            with deep love for arts — especially <span className="text-yellow-400 font-semibold">karawitan, musical theater, and
+            orchestra</span>.
           </p>
 
           <div className="py-10 flex flex-wrap justify-center gap-3 md:gap-4">
