@@ -1,8 +1,6 @@
 import { siteConfig } from "@/lib/site";
 import { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -11,7 +9,7 @@ export const metadata: Metadata = {
 
   title: {
     default: siteConfig.name,
-    template: `%s | ${siteConfig.shortName}`,
+    template: `%s - ${siteConfig.shortName}`,
   },
 
   description: siteConfig.description,
@@ -105,9 +103,7 @@ export default function RootLayout({
           <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black" />
         </div>
         <div className="min-h-screen flex flex-col relative z-10">
-          <Navbar />
-          <main className="flex-1 pt-24 md:pt-32">{children}</main>
-          <Footer />
+          <main className="flex-1">{children}</main>
         </div>
       </body>
     </html>
