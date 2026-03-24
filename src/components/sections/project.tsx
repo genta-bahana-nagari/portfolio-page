@@ -5,7 +5,7 @@ import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useState, useMemo, useEffect } from "react";
 
-import { projects } from "@/content/project/index";
+import { projects } from "@/content/projects";
 
 export function Project() {
   const [current, setCurrent] = useState(0);
@@ -96,9 +96,9 @@ export function Project() {
                               {project.category}
                             </span>
                           )}
-                          {project.status && (
+                          {project.isUnderDevelopment && (
                             <span className="absolute top-2 left-2 bg-white/20 text-gray-300 border border-white/30 text-xs px-2 py-1 rounded-md">
-                              {project.status}
+                              Under Development
                             </span>
                           )}
                         </div>

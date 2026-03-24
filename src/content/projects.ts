@@ -1,8 +1,10 @@
-export const projects = [
+import { Project } from "@/types/projectType";
+
+export const projects: Project[] = [
   {
     name: "Useless Facts Club",
     category: "Side Project",
-    status: "Under Development",
+    isUnderDevelopment: true,
     description: "A fun space for sharing useless facts, giving votes, and check your leaderboard.",
     techStack: ["Next.js", "Node.js", "PostgreSQL"],
     github: "https://github.com/genta-bahana-nagari/useless-facts-club",
@@ -12,7 +14,7 @@ export const projects = [
   {
     name: "SIJA Phone",
     category: "Group Project",
-    status: null,
+    isUnderDevelopment: false,
     description: "Simple group project about Phone Store, featured with RBAC, checkout and shipping feature.",
     techStack: ["Laravel", "Tailwind", "MySQL"],
     github: "https://github.com/genta-bahana-nagari/sija-phone",
@@ -22,7 +24,7 @@ export const projects = [
   {
     name: "SIJA Kerja",
     category: "Learning Project",
-    status: null,
+    isUnderDevelopment: false,
     description: "This project is based on the theme of Practical Exam, an information system for internship applications.",
     techStack: ["Laravel", "Livewire", "MySQL"],
     github: "https://github.com/genta-bahana-nagari/sija-kerja",
@@ -32,7 +34,7 @@ export const projects = [
   {
     name: "Inventory System",
     category: "Learning Project",
-    status: null,
+    isUnderDevelopment: false,
     description: "Basic inventory system with high reliability and data accuracy. Used as my Laravel learning fundamental.",
     techStack: ["Laravel", "Bootstrap", "MySQL"],
     github: "https://github.com/genta-bahana-nagari/sinvent24",

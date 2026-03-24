@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-import { experiences } from "@/content/experience/index";
+import { experiences } from "@/content/experiences";
 
 export function Experience() {
   return (
