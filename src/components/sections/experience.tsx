@@ -65,8 +65,8 @@ export function Experience() {
                     </h3>
 
                     <p className="text-sm md:text-base font-medium text-gray-300">
-                      {exp.type}{" "}
-                      <span className="text-gray-500">({exp.period})</span>
+                      {exp.type}
+                      <span className="text-gray-500">{" | "}{exp.period}</span>
                     </p>
 
                     <p className="text-base text-yellow-400 font-semibold">
