@@ -9,7 +9,8 @@ This is my personal portfolio website built using **NextJS 16** along with **Tai
 ## 🛠️ Tech Stack
 
 - **Frontend:** NextJS 16, Tailwind
-- **Deployment:** Vercel
+- **Email Sender Service:** EmailJS
+- **Deployment:** Vercel, Docker (with your own config)
 
 ---
 
@@ -25,90 +26,91 @@ This is my personal portfolio website built using **NextJS 16** along with **Tai
 ## 📁 Project Structure
 
 ```sh
- my-portfolio/
- ├── public/
- │   ├── icons/
- │   │   ├── coding-camp.jpeg
- │   │   ├── Gamatechno.jpg
- │   │   ├── icon.png
- │   │   ├── Karawitan-Stembayo.png
- │   │   └── PAKS-Stembayo.png
- │   │
- │   └── images/
- │       ├── certifications/
- │       │   └── MTCNA.jpg
- │       │
- │       ├── og-image.png
- │       │
- │       ├── profile/
- │       │   ├── profile_1.jpg
- │       │   ├── profile_2.jpg
- │       │   └── profile_3.jpg
- │       │
- │       └── projects/
- │           ├── Esp_Cam.jpg
- │           ├── Facts_Club.png
- │           ├── Inventory_System.png
- │           ├── Safe_Walk.jpg
- │           └── SIJA_Phone.png
- ├── src/
- │   ├── app/
- │   │   ├── page.tsx
- │   │   ├── layout.tsx
- │   │   ├── globals.css
- │   │   ├── not-found.tsx
- │   │   │
- │   │   ├── about/
- │   │   │   └── page.tsx
- │   │   ├── contact/
- │   │   │   └── page.tsx
- │   │   ├── experience/
- │   │   │   └── page.tsx
- │   │   ├── project/
- │   │   │   └── page.tsx
- │   │   └── profile/
- │   │       └── page.tsx
- │   │  
- │   ├── components/
- │   │   │
- │   │   ├── layout/
- │   │   │   ├── container.tsx
- │   │   │   ├── footer.tsx
- │   │   │   └── navbar.tsx
- │   │   │
- │   │   ├── sections/
- │   │   │   ├── about.tsx
- │   │   │   ├── contact.tsx
- │   │   │   ├── experience.tsx
- │   │   │   ├── hero.tsx
- │   │   │   └── project.tsx
- │   │   │
- │   │   └── ui/
- │   │       └── resume/
- │   │           ├── resume-tab.tsx
- │   │           ├── experience-tab.tsx
- │   │           └── certification-tab.tsx
- │   │
- │   ├── content/
- │   │   ├── certification/
- │   │   │   └── index.ts
- │   │   ├── experience/
- │   │   │   └── index.ts
- │   │   └── project/
- │   │       └── index.ts
- │   └── lib/
- │       ├── document.ts
- │       ├── email.ts
- │       ├── links.ts
- │       └── site.ts
- │
- ├── package.json
- ├── package-lock.json
- ├── tsconfig.json
- ├── next.config.ts
- ├── postcss.config.mjs
- ├── eslint.config.mjs
- └── README.md
+personal-portfolio/
+│
+├── public/
+│   ├── icons/
+│   │   ├── coding-camp.jpeg
+│   │   ├── Gamatechno.jpg
+│   │   ├── icon.png
+│   │   ├── Karawitan-Stembayo.png
+│   │   └── PAKS-Stembayo.png
+│   │
+│   ├── images/
+│   │   ├── profile/
+│   │   │   ├── profile_1.jpg
+│   │   │   ├── profile_2.jpg
+│   │   │   └── profile_3.jpg
+│   │   │
+│   │   │   projects/
+│   │   │   ├── Facts_Club.png
+│   │   │   ├── Inventory_System.png
+│   │   │   └── SIJA_Phone.png
+│   │   │
+│   │   └── og-image.png
+│   │
+│   ├── favicon-16x16.png
+│   ├── favicon-180x180.png
+│   ├── favicon-192x192.png
+│   ├── favicon-32x32.png
+│   ├── favicon-512x512.png
+│   ├── favicon.png
+│   └── manifest.json
+│
+├── src/
+│   ├── app/
+│   │   ├── about/
+│   │   │   └── page.tsx
+│   │   ├── contact/
+│   │   │   └── page.tsx
+│   │   ├── experience/
+│   │   │   └── page.tsx
+│   │   ├── project/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx
+│   │   ├── page.tsx
+│   │   ├── robots.ts
+│   │   └── sitemap.ts
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── container.tsx
+│   │   │   ├── footer.tsx
+│   │   │   └── navbar.tsx
+│   │   │
+│   │   └── sections/
+│   │       ├── about.tsx
+│   │       ├── contact.tsx
+│   │       ├── experience.tsx
+│   │       ├── hero.tsx
+│   │       └── project.tsx
+│   │
+│   ├── content/
+│   │   ├── experience/
+│   │   │   └── index.ts
+│   │   └── project/
+│   │       └── index.ts
+│   │
+│   └── lib/
+│       ├── document.ts
+│       ├── email.ts
+│       ├── links.ts
+│       └── site.ts
+│
+├── .env.example
+├── .gitignore
+├── eslint.config.mjs
+├── LICENSE
+├── next-sitemap.config.js
+├── next.config.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
 ```
 
 ## 📦 Installation & Setup
@@ -131,11 +133,11 @@ To run this project locally, follow these steps:
    You will see this configuration and adjust them with your keys and links:
 
    ```sh
-    NEXT_PUBLIC_SITE_URL=your_site_url
+    NEXT_PUBLIC_SITE_URL='your_site_url'
 
-    NEXT_PUBLIC_EMAILJS_SERVICE_ID=
-    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
-    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
+    NEXT_PUBLIC_EMAILJS_SERVICE_ID='your_emailjs_service_id'
+    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID='your_emailjs_template_id'
+    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY='your_emailjs_public_key'
 
     NEXT_PUBLIC_CV_LINK='https://drive.google.com/xxxx'
     NEXT_PUBLIC_PORTFOLIO_LINK='https://drive.google.com/xxxx'

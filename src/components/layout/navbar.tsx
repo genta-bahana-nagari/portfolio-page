@@ -18,15 +18,15 @@ export function Navbar() {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-50">
-        <nav className="flex items-center px-8 py-4 rounded-full bg-black/70 backdrop-blur-lg border border-gray-800 shadow-lg">
+      <div className="hidden md:flex pt-12 fixed left-1/2 -translate-x-1/2 z-50">
+        <nav className="flex items-center px-2 py-2 gap-1 rounded-full bg-black/70 backdrop-blur-lg border border-gray-800 shadow-lg">
           {navLinks.map((link, index) => (
             <div key={link.href} className="flex items-center">
               <Link
                 href={link.href}
-                className={`flex items-center gap-2 px-3 text-sm md:text-base font-medium transition-colors duration-200 ${
+                className={`flex items-center gap-2 px-3 py-1 text-sm font-medium transition-all duration-300 ${
                   pathname === link.href
-                    ? "text-yellow-400"
+                    ? "text-amber-300 bg-white/10 border border-white/20 rounded-full"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -41,14 +41,14 @@ export function Navbar() {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-        <nav className="flex items-center gap-4 px-5 py-3 rounded-full bg-black/80 backdrop-blur-xl border border-gray-800 shadow-xl">
+      <div className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-50 mb-2">
+        <nav className="flex items-center gap-4 px-5 py-3 rounded-full bg-black/70 backdrop-blur-lg border border-gray-800 shadow-xl">
           {navLinks.map((link, index) => (
             <div key={link.href} className="flex items-center gap-4">
               <Link
                 href={link.href}
-                className={`relative text-lg transition-colors duration-200 ${
-                  pathname === link.href ? "text-yellow-400" : "text-white/70"
+                className={`relative text-base font-semibold transition-colors duration-200 ${
+                  pathname === link.href ? "text-amber-300" : "text-white/70"
                 }`}
               >
                 {link.icon}
