@@ -9,7 +9,7 @@ export default function MainLayout({
   return (
     <>
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-800 to-black" />
       </div>
       <div className="min-h-screen flex flex-col relative z-10">
         <Navbar />
