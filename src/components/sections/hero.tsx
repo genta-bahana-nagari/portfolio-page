@@ -93,7 +93,7 @@ export function Hero() {
 
           <div className="py-10 flex flex-wrap justify-center gap-3 md:gap-4">
             <motion.a
-              href="#contact"
+              href="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold 
