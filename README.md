@@ -42,7 +42,7 @@ personal-portfolio/
 │   │   │   ├── profile_2.jpg
 │   │   │   └── profile_3.jpg
 │   │   │
-│   │   │   projects/
+│   │   ├── projects/
 │   │   │   ├── Facts_Club.png
 │   │   │   ├── Inventory_System.png
 │   │   │   └── SIJA_Phone.png
