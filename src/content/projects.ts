@@ -1,16 +1,16 @@
 import { Project } from "@/types/projectType";
 
 export const projects: Project[] = [
-  {
-    name: "Useless Facts Club",
-    category: "Side Project",
-    isUnderDevelopment: true,
-    description: "A fun space for sharing useless facts, giving votes, and check your leaderboard.",
-    techStack: ["Next.js", "Node.js", "PostgreSQL"],
-    github: "https://github.com/genta-bahana-nagari/useless-facts-club",
-    preview: "https://useless-facts-club.vercel.app/",
-    image: "/images/projects/Facts_Club.png",
-  },
+  // {
+  //   name: "Useless Facts Club",
+  //   category: "Side Project",
+  //   isUnderDevelopment: true,
+  //   description: "A fun space for sharing useless facts, giving votes, and check your leaderboard.",
+  //   techStack: ["Next.js", "Node.js", "PostgreSQL"],
+  //   github: "https://github.com/genta-bahana-nagari/useless-facts-club",
+  //   preview: "https://useless-facts-club.vercel.app/",
+  //   image: "/images/projects/Facts_Club.png",
+  // },
   {
     name: "SIJA Phone",
     category: "Group Project",
