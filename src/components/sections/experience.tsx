@@ -49,7 +49,7 @@ export function Experience() {
               >
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
                   {exp.logo && (
-                    <div className="flex-shrink-0">
+                    <div className="flex shrink-0">
                       <img
                         src={exp.logo}
                         alt={exp.company}
