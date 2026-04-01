@@ -31,7 +31,7 @@ This is my personal portfolio website built using **NextJS 16** along with **Tai
 - **Database**: Supabase as PostgreSQL provider
 - **Authentication**: OAuth 2.0 (Google, GitHub, Discord)
 
-### Deployment
+### Deployment Options
 
 - **Vercel**: Integrate your GitHub repo with Vercel
 - **Web Server**: Nginx with reverse proxy
@@ -155,7 +155,7 @@ personal-portfolio/
 
 - Node.js (22 or newer)
 - npm or yarn
-- Git
+- Git (with GitHub)
 - Supabase PostgreSQL
 
 ### Environment Setup
@@ -172,7 +172,6 @@ personal-portfolio/
    ```sh
    cp .env.example .env
    ```
-
    You will see this configuration and adjust them with your keys and links:
 
    ```sh
@@ -271,7 +270,7 @@ Ensure all required environment variables are set in production:
 
 - Database connection strings
 - OAuth client credentials
-- Security configurations
+- EmailJS Key and ID's
 - All of your social links
 
 ## 🚀 Deployment
