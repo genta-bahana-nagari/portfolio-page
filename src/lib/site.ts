@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Genta Bahana Nagari - Full-Stack Developer",
   shortName: "Genta Bahana Nagari",
   description: "Personal portfolio of Genta Bahana Nagari — Fullstack Developer specializing in modern web applications.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://gentabahana.my.id",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://gentabahana.web.id",
   ogImage: "/images/og-image.png",
   ogImageAlt: "Genta Bahana Nagari - My Personal Portfolio",
   locale: "id_ID",
