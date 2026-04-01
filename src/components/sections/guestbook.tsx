@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { BiPen } from "react-icons/bi";
+import { FaGithub, FaGoogle, FaDiscord } from "react-icons/fa";
 
 type Message = {
   id: string;
@@ -65,7 +67,7 @@ export function Guestbook() {
       provider,
       options: {
         redirectTo: `${window.location.origin}/guestbook`,
-      }
+      },
     });
   };
 
@@ -87,7 +89,7 @@ export function Guestbook() {
 
   return (
     <section
-      id="about"
+      id="guestbook"
       className="flex flex-col items-center px-6 text-white pt-0 mb-12 md:mb-0 md:pt-12"
     >
       <motion.div
@@ -111,27 +113,49 @@ export function Guestbook() {
           </p>
         </motion.div>
         <motion.div
-          className="w-full max-w-2xl mx-auto px-4 md:px-0 py-4 space-y-6"
+          className="w-full max-w-2xl lg:max-w-5xl mx-auto px-4 md:px-0 py-4 space-y-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          {/* AUTH / INPUT */}
           {!user ? (
             <div className="flex flex-wrap gap-3 justify-center">
-              {["github", "google", "discord"].map((p) => (
-                <button
-                  key={p}
-                  onClick={() => login(p as any)}
-                  className="px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:bg-gray-200 transition shadow-lg shadow-white/10"
-                >
-                  Sign in with {p}
-                </button>
-              ))}
+              <button
+                onClick={() => login("github")}
+                className="cursor-pointer flex items-center gap-2 px-4 py-2 rounded-xl 
+               bg-[#171515] text-white text-sm font-medium
+               hover:scale-105 hover:opacity-90 transition-all duration-300"
+              >
+                <FaGithub size={16} />
+                GitHub
+              </button>
+              <button
+                onClick={() => login("google")}
+                className="cursor-pointer flex items-center gap-2 px-4 py-2 rounded-xl 
+               bg-white text-black text-sm font-medium
+               hover:scale-105 hover:bg-gray-200 transition-all duration-300"
+              >
+                <FaGoogle size={16} />
+                Google
+              </button>
+
+              <button
+                onClick={() => login("discord")}
+                className="cursor-pointer flex items-center gap-2 px-4 py-2 rounded-xl 
+               bg-[#5865F2] text-white text-sm font-medium
+               hover:scale-105 hover:opacity-90 transition-all duration-300"
+              >
+                <FaDiscord size={16} />
+                Discord
+              </button>
             </div>
           ) : (
-            <div className="w-full space-y-4">
-              <div className="flex gap-3 items-start bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg shadow-black/20">
+            <div>
+              <div
+                className="flex gap-3 items-start bg-white/10 backdrop-blur-md 
+                p-4 rounded-2xl border border-white/10 
+                shadow-md shadow-black/20 focus-within:ring-1 focus-within:ring-amber-400/40 transition"
+              >
                 <Image
                   src={user.user_metadata.avatar_url}
                   alt="avatar"
@@ -143,14 +167,17 @@ export function Guestbook() {
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  placeholder="Write something..."
-                  className="flex-1 bg-transparent outline-none text-sm resize-none placeholder:text-white/40"
+                  placeholder="Write a message..."
+                  rows={2}
+                  className="flex-1 bg-transparent outline-none text-sm resize-none 
+             placeholder:text-white/40"
                 />
 
                 <button
                   onClick={sendMessage}
                   disabled={loading}
-                  className="px-4 py-2 rounded-full bg-amber-400 text-black text-sm font-semibold hover:bg-amber-500 transition disabled:opacity-50"
+                  className="cursor-pointer px-4 py-2 rounded-full bg-black/20 text-amber-300 border border-amber-500/30 text-sm font-semibold
+                  hover:bg-black/30 transition disabled:opacity-50"
                 >
                   Send
                 </button>
@@ -158,43 +185,56 @@ export function Guestbook() {
             </div>
           )}
 
-          {/* ✨ MESSAGES SECTION */}
-          <div className="w-full space-y-4">
+          <div className="w-full space-y-4 max-h-105 overflow-y-auto">
             {messages.length === 0 && (
-              <p className="text-center text-white/50 text-sm">
-                No messages yet — be the first 👀
-              </p>
+              <div className="flex flex-col items-center justify-center py-4 px-6 text-center bg-white/5 border border-white/10 rounded-xl backdrop-blur-md">
+                <div className="text-xl mb-3">
+                  <BiPen />
+                </div>
+                <p className="mx-3 md:mx-0 text-sm md:text-base leading-relaxed text-center text-white/90">
+                  Be the first to leave a message. Your thoughts, feedback, or
+                  greetings are highly appreciated.
+                </p>
+              </div>
             )}
 
-            {messages.map((msg) => (
-              <motion.div
-                key={msg.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className="flex gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg shadow-black/20"
-              >
-                <Image
-                  src={msg.user_avatar || "/images/profile/profile_1.jpg"}
-                  alt="avatar"
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
+            <div
+              className="w-full space-y-4 p-3 rounded-2xl 
+                bg-white/5 border border-white/10 
+                backdrop-blur-md"
+            >
+              {messages.map((msg, index) => (
+                <motion.div
+                  key={msg.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  className="flex gap-3 p-4 rounded-2xl
+                bg-linear-to-br from-white/10 to-white/5 border border-white/10 backdrop-blur-lg shadow-md shadow-black/20 hover:shadow-lg hover:shadow-black-30 transition-all duration-300"
+                >
+                  <Image
+                    src={msg.user_avatar || "/images/profile/profile_1.jpg"}
+                    alt="avatar"
+                    width={42}
+                    height={42}
+                    className="rounded-full border border-white/20 shadow-sm"
+                  />
 
-                <div className="flex-1">
-                  <div className="flex justify-start items-center">
-                    <p className="text-sm font-semibold text-amber-300">
-                      {msg.user_name}
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm font-semibold text-amber-300 tracking-wide">
+                        {msg.user_name}
+                      </p>
+                      <span className="text-xs text-white/40">• just now</span>
+                    </div>
+
+                    <p className="text-sm text-white/80 mt-1 leading-relaxed">
+                      {msg.message}
                     </p>
                   </div>
-
-                  <p className="text-sm text-white/80 mt-1 leading-relaxed">
-                    {msg.message}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </motion.div>
