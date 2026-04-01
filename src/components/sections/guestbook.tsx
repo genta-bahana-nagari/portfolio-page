@@ -6,6 +6,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BiPen } from "react-icons/bi";
 import { FaGithub, FaGoogle, FaDiscord } from "react-icons/fa";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(relativeTime);
 
 type Message = {
   id: string;
@@ -154,16 +158,8 @@ export function Guestbook() {
               <div
                 className="flex gap-3 items-start bg-white/10 backdrop-blur-md 
                 p-4 rounded-2xl border border-white/10 
-                shadow-md shadow-black/20 focus-within:ring-1 focus-within:ring-amber-400/40 transition"
+                shadow-md shadow-black/20 focus-within:ring-1 focus-within:ring-zinc-300/40 transition"
               >
-                <Image
-                  src={user.user_metadata.avatar_url}
-                  alt="avatar"
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
@@ -176,7 +172,7 @@ export function Guestbook() {
                 <button
                   onClick={sendMessage}
                   disabled={loading}
-                  className="cursor-pointer px-4 py-2 rounded-full bg-black/20 text-amber-300 border border-amber-500/30 text-sm font-semibold
+                  className="cursor-pointer px-4 py-2 rounded-xl bg-black/20 text-amber-300 border border-amber-500/30 text-sm font-semibold
                   hover:bg-black/30 transition disabled:opacity-50"
                 >
                   Send
@@ -186,31 +182,31 @@ export function Guestbook() {
           )}
 
           <div className="w-full space-y-4 max-h-105 overflow-y-auto">
-            {messages.length === 0 && (
-              <div className="flex flex-col items-center justify-center py-4 px-6 text-center bg-white/5 border border-white/10 rounded-xl backdrop-blur-md">
-                <div className="text-xl mb-3">
-                  <BiPen />
-                </div>
-                <p className="mx-3 md:mx-0 text-sm md:text-base leading-relaxed text-center text-white/90">
-                  Be the first to leave a message. Your thoughts, feedback, or
-                  greetings are highly appreciated.
-                </p>
-              </div>
-            )}
-
             <div
               className="w-full space-y-4 p-3 rounded-2xl 
                 bg-white/5 border border-white/10 
                 backdrop-blur-md"
             >
+              {messages.length === 0 && (
+                <div className="flex flex-col items-center justify-center py-4 px-6 text-center bg-white/5 border border-white/10 rounded-xl backdrop-blur-md">
+                  <div className="text-xl mb-3">
+                    <BiPen />
+                  </div>
+                  <p className="mx-3 md:mx-0 text-sm md:text-base leading-relaxed text-center text-white/90">
+                    Be the first to leave a message. Your thoughts, feedback, or
+                    greetings are highly appreciated.
+                  </p>
+                </div>
+              )}
+
               {messages.map((msg, index) => (
                 <motion.div
                   key={msg.id}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex gap-3 p-4 rounded-2xl
-                bg-linear-to-br from-white/10 to-white/5 border border-white/10 backdrop-blur-lg shadow-md shadow-black/20 hover:shadow-lg hover:shadow-black-30 transition-all duration-300"
+                  className="flex gap-3 p-4
+                bg-white/5 border border-white/10 rounded-xl backdrop-blur-md shadow-md shadow-black/20 hover:shadow-lg hover:shadow-black-30 transition-all duration-300"
                 >
                   <Image
                     src={msg.user_avatar || "/images/profile/profile_1.jpg"}
@@ -225,7 +221,7 @@ export function Guestbook() {
                       <p className="text-sm font-semibold text-amber-300 tracking-wide">
                         {msg.user_name}
                       </p>
-                      <span className="text-xs text-white/40">• just now</span>
+                      <span className="text-xs text-white/40">• {dayjs(msg.created_at).fromNow()}</span>
                     </div>
 
                     <p className="text-sm text-white/80 mt-1 leading-relaxed">
