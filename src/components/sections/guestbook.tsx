@@ -172,7 +172,7 @@ export function Guestbook() {
                 <button
                   onClick={sendMessage}
                   disabled={loading}
-                  className="cursor-pointer px-4 py-2 rounded-xl bg-black/20 text-amber-300 border border-amber-500/30 text-sm font-semibold
+                  className="cursor-pointer px-4 py-2 rounded-xl bg-black/20 text-amber-300 border border-amber-500/30 text-xs md:text-sm font-semibold
                   hover:bg-black/30 transition disabled:opacity-50"
                 >
                   Send
@@ -205,26 +205,28 @@ export function Guestbook() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex gap-3 p-4
-                bg-white/5 border border-white/10 rounded-xl backdrop-blur-md shadow-md shadow-black/20 hover:shadow-lg hover:shadow-black-30 transition-all duration-300"
+                  className="flex gap-3 p-3 sm:p-4
+                bg-white/5 border border-white/10 rounded-xl backdrop-blur-md
+                shadow-md shadow-black/20 hover:shadow-lg hover:shadow-black-30
+                transition-all duration-300"
                 >
                   <Image
                     src={msg.user_avatar || "/images/profile/profile_1.jpg"}
                     alt="avatar"
-                    width={42}
-                    height={42}
-                    className="rounded-full border border-white/20 shadow-sm"
+                    width={36}
+                    height={36}
+                    className="rounded-full border border-white/20 shadow-sm w-9 h-9 sm:w-10.5 sm:h-10.5"
                   />
 
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                       <p className="text-sm font-semibold text-amber-300 tracking-wide">
                         {msg.user_name}
                       </p>
                       <span className="text-xs text-white/40">• {dayjs(msg.created_at).fromNow()}</span>
                     </div>
 
-                    <p className="text-sm text-white/80 mt-1 leading-relaxed">
+                    <p className="text-sm text-white/80 mt-1 leading-relaxed wrap-break-word whitespace-pre-wrap">
                       {msg.message}
                     </p>
                   </div>
