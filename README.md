@@ -6,20 +6,45 @@ This is my personal portfolio website built using **NextJS 16** along with **Tai
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Frontend:** NextJS 16, Tailwind
-- **Email Sender Service:** EmailJS
-- **Deployment:** Vercel, Docker (with your own config)
-
----
-
 ## ✨ Features
 
 - Fully responsive design with Tailwind CSS
-- Smooth animations and transitions
+- Smooth animations and optimized transitions
 - Dynamic project showcase with images and descriptions
 - Contact form integrated with EmailJS for email submissions
+- Guestbook with OAuth using GitHub, Google, or Discord account
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS
+
+### Backend
+
+- **Runtime**: Node.js
+- **Database**: Supabase as PostgreSQL provider
+- **Authentication**: OAuth 2.0 (Google, GitHub, Discord)
+
+### Deployment
+
+- **Vercel**: Integrate your GitHub repo with Vercel
+- **Web Server**: Nginx with reverse proxy
+- **Process Manager**: PM2 for Node.js applications
+- **CDN**: Cloudflare for performance and security
+- **Docker**: Docker deployment is supported for this project with your own configs
+
+### Development Tools
+
+- **Version Control**: Git with GitHub
+- **Package Manager**: npm/yarn
+- **Code Quality**: ESLint, TypeScript
+- **Build Tool**: Next.js built-in bundler
 
 ---
 
@@ -28,23 +53,22 @@ This is my personal portfolio website built using **NextJS 16** along with **Tai
 ```sh
 personal-portfolio/
 │
-├── public/
-│   ├── icons/
+├── public
+│   ├── icons
 │   │   ├── coding-camp.jpeg
 │   │   ├── Gamatechno.jpg
-│   │   ├── icon.png
 │   │   ├── Karawitan-Stembayo.png
 │   │   └── PAKS-Stembayo.png
 │   │
-│   ├── images/
-│   │   ├── profile/
+│   ├── images
+│   │   ├── profile
 │   │   │   ├── profile_1.jpg
 │   │   │   ├── profile_2.jpg
 │   │   │   └── profile_3.jpg
 │   │   │
-│   │   ├── projects/
-│   │   │   ├── Facts_Club.png
+│   │   ├── projects
 │   │   │   ├── Inventory_System.png
+│   │   │   ├── SIJA_Kerja.png
 │   │   │   └── SIJA_Phone.png
 │   │   │
 │   │   └── og-image.png
@@ -58,20 +82,29 @@ personal-portfolio/
 │   └── manifest.json
 │
 ├── src/
-│   ├── app/
-│   │   ├── about/
-│   │   │   └── page.tsx
-│   │   ├── contact/
-│   │   │   └── page.tsx
-│   │   ├── experience/
-│   │   │   └── page.tsx
-│   │   ├── project/
+│   ├── app
+│   │   ├── (main)
+│   │   │   ├── about
+│   │   │   │   └── page.tsx
+│   │   │   │
+│   │   │   ├── contact
+│   │   │   │   └── page.tsx
+│   │   │   │
+│   │   │   ├── experience
+│   │   │   │   └── page.tsx
+│   │   │   │
+│   │   │   ├── guestbook
+│   │   │   │   └── page.tsx
+│   │   │   │
+│   │   │   ├── project
+│   │   │   │   └── page.tsx
+│   │   │   │
+│   │   │   ├── layout.tsx
 │   │   │   └── page.tsx
 │   │   │
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   ├── not-found.tsx
-│   │   ├── page.tsx
 │   │   ├── robots.ts
 │   │   └── sitemap.ts
 │   │
@@ -118,7 +151,14 @@ personal-portfolio/
 
 ## 📦 Installation & Setup
 
-To run this project locally, follow these steps:
+### Prerequisites
+
+- Node.js (22 or newer)
+- npm or yarn
+- Git
+- Supabase PostgreSQL
+
+### Environment Setup
 
 1. **Clone the repository:**
 
@@ -136,20 +176,23 @@ To run this project locally, follow these steps:
    You will see this configuration and adjust them with your keys and links:
 
    ```sh
-    NEXT_PUBLIC_SITE_URL='your_site_url'
+   NEXT_PUBLIC_SITE_URL='your_site_url'
 
-    NEXT_PUBLIC_EMAILJS_SERVICE_ID='your_emailjs_service_id'
-    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID='your_emailjs_template_id'
-    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY='your_emailjs_public_key'
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID='your_emailjs_service_id'
+   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID='your_emailjs_template_id'
+   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY='your_emailjs_public_key'
 
-    NEXT_PUBLIC_CV_LINK='https://drive.google.com/xxxx'
-    NEXT_PUBLIC_PORTFOLIO_LINK='https://drive.google.com/xxxx'
+   NEXT_PUBLIC_SUPABASE_URL='your_public_supabase_url'
+   NEXT_PUBLIC_SUPABASE_ANON_KEY='your_public_supabase_anon_key'
 
-    NEXT_PUBLIC_GITHUB_LINK='https://github.com/xxxxxxxxx'
-    NEXT_PUBLIC_LINKEDIN_LINK='https://www.linkedin.com/in/xxxxxxxxx'
-    NEXT_PUBLIC_INSTAGRAM_LINK='https://instagram.com/xxxxxxxxxxxxxxx'
-    NEXT_PUBLIC_DISCORD_ID='https://discord.com/users/xxxxxxxxxxxxxxxxxx'
-    NEXT_PUBLIC_EMAIL_ADDRESS='mailto:xxxxxxxxxxxxxxxxx@gmail.com'
+   NEXT_PUBLIC_CV_LINK='https://drive.google.com/your_cv_link'
+   NEXT_PUBLIC_PORTFOLIO_LINK='https://drive.google.com/your_portfolio_link'
+
+   NEXT_PUBLIC_GITHUB_LINK='https://github.com/your_github_username'
+   NEXT_PUBLIC_LINKEDIN_LINK='https://www.linkedin.com/in/your_linkedin_username'
+   NEXT_PUBLIC_INSTAGRAM_LINK='https://instagram.com/your_instagram_username'
+   NEXT_PUBLIC_DISCORD_ID='https://discord.com/users/your_discord_id'
+   NEXT_PUBLIC_EMAIL_ADDRESS='mailto:your_email_account@gmail.com'
    ```
 
 3. **Install dependencies:**
@@ -158,21 +201,85 @@ To run this project locally, follow these steps:
    npm install
    ```
 
-4. **Run the development server:**
+4. **Configure OAuth applications:**
+   - **Google**: Create OAuth client in Google Cloud Console
+   - **GitHub**: Create OAuth app in GitHub Developer Settings
+   - **Discord**: Create application in Discord Developer Portal
+
+5. **Run the development server:**
 
    ```sh
    npm run dev
    ```
 
-5. Open http://localhost:3000 in your browser.
+6. Open http://localhost:3000 in your browser.
 
 ---
+
+## 🔧 Configuration
+
+### OAuth Setup
+
+1. **Google OAuth**:
+   - Go to Google Cloud Console
+   - Create OAuth 2.0 credentials
+   - Add authorized redirect URIs
+   - Enable People API
+
+2. **GitHub OAuth**:
+   - Go to GitHub Developer Settings
+   - Create new OAuth App
+   - Set authorization callback URL
+
+3. **Discord OAuth**:
+   - Go to Discord Developer Portal
+   - Create new application
+   - Set redirect URIs in OAuth2 settings
+
+### Database Schema
+
+The application uses Supabase with single table, e.g. ```guestbook```. Queries to execute:
+
+   ```sh
+      # Create table schema
+      create table guestbook (
+         id uuid primary key default uuid_generate_v4(),
+         user_id uuid references auth.users(id),
+         user_name_ text,
+         user_avatar text,
+         message text
+         created_at timestamp with time zone default now(),
+      );
+
+      # Add security policy
+      create policy "Allow insert for authenticated users"
+         on guestbook
+         for insert
+         to authenticated
+         with check (auth.uid() = user_id);
+
+      create policy "Allow read for all"
+         on guestbook
+         for select
+         to public
+         using (true);
+   ```
+
+### Environment Variables
+
+Ensure all required environment variables are set in production:
+
+- Database connection strings
+- OAuth client credentials
+- Security configurations
+- All of your social links
 
 ## 🚀 Deployment
 
 To deploy the project, use one of these services:
 
 - **Vercel:** `vercel --prod`, or you can connect your repo and deploy.
+- **Nginx & PM2:** config your own Nginx and PM2 service along with other related configurations.
 - **Docker:** config your own Dockerfile along with other related configurations.
 
 ---
