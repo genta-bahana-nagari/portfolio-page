@@ -63,6 +63,9 @@ export function Guestbook() {
   const login = async (provider: "github" | "google" | "discord") => {
     await supabase.auth.signInWithOAuth({
       provider,
+      options: {
+        redirectTo: `${window.location.origin}/guestbook`,
+      }
     });
   };
 
@@ -80,10 +83,6 @@ export function Guestbook() {
 
     setText("");
     setLoading(false);
-  };
-
-  const deleteMessage = async (id: string) => {
-    await supabase.from("guestbook").delete().eq("id", id);
   };
 
   return (
@@ -184,19 +183,10 @@ export function Guestbook() {
                 />
 
                 <div className="flex-1">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-start items-center">
                     <p className="text-sm font-semibold text-amber-300">
                       {msg.user_name}
                     </p>
-
-                    {user?.id === msg.user_id && (
-                      <button
-                        onClick={() => deleteMessage(msg.id)}
-                        className="text-xs text-red-400 hover:text-red-500"
-                      >
-                        delete
-                      </button>
-                    )}
                   </div>
 
                   <p className="text-sm text-white/80 mt-1 leading-relaxed">
