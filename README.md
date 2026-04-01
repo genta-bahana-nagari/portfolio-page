@@ -88,17 +88,20 @@ personal-portfolio/
 │   │       ├── hero.tsx
 │   │       └── project.tsx
 │   │
-│   ├── content/
-│   │   ├── experience/
-│   │   │   └── index.ts
-│   │   └── project/
-│   │       └── index.ts
+│   ├── content
+│   │   ├── experiences.ts
+│   │   └── projects.ts
 │   │
-│   └── lib/
-│       ├── document.ts
-│       ├── email.ts
-│       ├── links.ts
-│       └── site.ts
+│   ├── lib
+│   │   ├── document.ts
+│   │   ├── email.ts
+│   │   ├── links.ts
+│   │   ├── site.ts
+│   │   └── supabase.ts
+│   │
+│   └── types
+│       ├── experienceType.ts
+│       └── projectType.ts
 │
 ├── .env.example
 ├── .gitignore
