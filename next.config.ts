@@ -16,7 +16,22 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.discordapp.com",
       },
-    ]
+    ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "gentabahana.vercel.app",
+          },
+        ],
+        destination: "https://www.gentabahana.web.id/:path*",
+        permanent: true,
+      },
+    ];
   },
 };
 

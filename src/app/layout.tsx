@@ -30,7 +30,10 @@ export const metadata: Metadata = {
   category: "technology",
 
   alternates: {
-    canonical: siteConfig.url,
+    canonical: `${siteConfig.url}`,
+    languages: {
+      "en-US": "https://gentabahana.web.id",
+    },
   },
 
   formatDetection: {
@@ -63,12 +66,24 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     creator: "@gentabahananagari",
-    images: [siteConfig.ogImage],
+    images: {
+      url: siteConfig.ogImage,
+      alt: `${siteConfig.name} | ${siteConfig.description}`,
+    },
   },
 
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   icons: {
