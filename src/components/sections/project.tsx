@@ -155,23 +155,25 @@ export function Project() {
           </div>
         </div>
 
-        <div className="flex justify-center gap-4 mt-0 md:mt-6">
-          <button
-            onClick={() => setCurrent((prev) => Math.max(prev - 1, 0))}
-            className="px-3 py-3 cursor-pointer bg-white/10 rounded-full hover:bg-white/20 transition"
-          >
-            <IoMdArrowRoundBack />
-          </button>
+        {projects.length > 3 && (
+          <div className="flex justify-center gap-4 mt-0 md:mt-6">
+            <button
+              onClick={() => setCurrent((prev) => Math.max(prev - 1, 0))}
+              className="px-3 py-3 cursor-pointer bg-white/10 rounded-full hover:bg-white/20 transition"
+            >
+              <IoMdArrowRoundBack />
+            </button>
 
-          <button
-            onClick={() =>
-              setCurrent((prev) => Math.min(prev + 1, slides.length - 1))
-            }
-            className="px-3 py-3 cursor-pointer bg-white/10 rounded-full hover:bg-white/20 transition"
-          >
-            <IoMdArrowRoundForward />
-          </button>
-        </div>
+            <button
+              onClick={() =>
+                setCurrent((prev) => Math.min(prev + 1, slides.length - 1))
+              }
+              className="px-3 py-3 cursor-pointer bg-white/10 rounded-full hover:bg-white/20 transition"
+            >
+              <IoMdArrowRoundForward />
+            </button>
+          </div>
+        )}
       </motion.div>
     </section>
   );
