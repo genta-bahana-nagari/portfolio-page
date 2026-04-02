@@ -120,6 +120,19 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col relative z-10">
           <main className="flex-1">{children}</main>
         </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Genta Bahana Nagari",
+              url: siteConfig.url,
+              jobTitle: "Fullstack Developer",
+            }),
+          }}
+        />
       </body>
     </html>
   );
