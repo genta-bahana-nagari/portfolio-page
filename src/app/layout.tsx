@@ -115,7 +115,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col bg-black text-white relative overflow-x-hidden">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-800 to-black" />
+          <div className="absolute inset-0 bg-linear-to-br from-black via-zinc-800 to-black" />
         </div>
         <div className="min-h-screen flex flex-col relative z-10">
           <main className="flex-1">{children}</main>
