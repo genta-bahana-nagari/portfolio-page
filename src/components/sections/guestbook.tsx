@@ -154,29 +154,35 @@ export function Guestbook() {
               </button>
             </div>
           ) : (
-            <div>
-              <div
-                className="flex gap-3 items-start bg-white/10 backdrop-blur-md 
-                p-4 rounded-2xl border border-white/10 
+            <div
+              className="w-full space-y-4 p-3 rounded-2xl 
+                bg-white/5 border border-white/10 
+                backdrop-blur-md"
+            >
+              <div>
+                <div
+                  className="flex gap-3 items-start bg-white/10 backdrop-blur-md 
+                p-4 rounded-xl border border-white/10 
                 shadow-md shadow-black/20 focus-within:ring-1 focus-within:ring-zinc-300/40 transition"
-              >
-                <textarea
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
-                  placeholder="Write a message..."
-                  rows={2}
-                  className="flex-1 bg-transparent outline-none text-sm resize-none 
-             placeholder:text-white/40"
-                />
-
-                <button
-                  onClick={sendMessage}
-                  disabled={loading}
-                  className="cursor-pointer px-4 py-2 rounded-xl bg-black/20 text-amber-300 border border-amber-500/30 text-xs md:text-sm font-semibold
-                  hover:bg-black/30 transition disabled:opacity-50"
                 >
-                  Send
-                </button>
+                  <textarea
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                    placeholder="Write a message..."
+                    rows={2}
+                    className="flex-1 bg-transparent outline-none text-sm resize-none 
+             placeholder:text-white/40"
+                  />
+
+                  <button
+                    onClick={sendMessage}
+                    disabled={loading}
+                    className="cursor-pointer px-4 py-2 rounded-xl bg-black/20 text-amber-300 border border-amber-500/30 text-xs md:text-sm font-semibold
+                  hover:bg-black/30 transition disabled:opacity-50"
+                  >
+                    Send
+                  </button>
+                </div>
               </div>
             </div>
           )}
@@ -205,7 +211,7 @@ export function Guestbook() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex gap-3 p-3 sm:p-4
+                  className="flex gap-3 p-3 sm:p-4 cursor-pointer
                 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md
                 shadow-md shadow-black/20 hover:shadow-lg hover:shadow-black-30
                 transition-all duration-300"
@@ -223,7 +229,9 @@ export function Guestbook() {
                       <p className="text-sm font-semibold text-amber-300 tracking-wide">
                         {msg.user_name}
                       </p>
-                      <span className="text-xs text-white/40">• {dayjs(msg.created_at).fromNow()}</span>
+                      <span className="text-xs text-white/40">
+                        • {dayjs(msg.created_at).fromNow()}
+                      </span>
                     </div>
 
                     <p className="text-sm text-white/80 mt-1 leading-relaxed wrap-break-word whitespace-pre-wrap">
