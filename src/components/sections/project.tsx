@@ -1,6 +1,6 @@
 "use client";
 import { FaGithub } from "react-icons/fa";
-import { CgScreen } from "react-icons/cg";
+import { IoOpenOutline } from "react-icons/io5";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useState, useMemo, useEffect } from "react";
@@ -106,46 +106,59 @@ export function Project() {
                           {project.description}
                         </p>
 
-                        <div className="mt-auto flex flex-wrap justify-between items-center gap-4">
-                          <div className="flex flex-wrap gap-2">
-                            {project.techStack?.map((tech, i) => (
-                              <span
-                                key={i}
-                                className="bg-black/20 text-amber-300 border border-amber-500/30 text-xs font-semibold px-2 py-1 rounded-md backdrop-blur-md"
-                              >
-                                {tech}
-                              </span>
-                            ))}
+                        <div className="flex flex-col gap-2">
+                          <div className="mt-auto flex flex-wrap justify-start items-center gap-4">
+                            <div className="flex flex-wrap gap-2">
+                              {project.techStack?.map((tech, i) => (
+                                <span
+                                  key={i}
+                                  className="bg-black/20 text-amber-300 border border-amber-500/30 text-xs font-semibold px-2 py-1 rounded-md backdrop-blur-md"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
                           </div>
-
-                          <div className="flex gap-4 px-2 md:px-0">
-                            {project.preview && (
-                              <a
-                                href={project.preview}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-gray-300 transition"
-                              >
-                                <CgScreen className="h-5 w-5" />
-                              </a>
-                            )}
-                            {project.github ? (
-                              <a
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-gray-300 transition"
-                              >
-                                <FaGithub className="h-5 w-5" />
-                              </a>
-                            ) : (
-                              <span
-                                title="Private repository"
-                                className="text-gray-500 transition cursor-not-allowed"
-                              >
-                                <FaGithub className="h-5 w-5" />
-                              </span>
-                            )}
+                          <div className="mt-2 flex flex-wrap justify-start items-center gap-4">
+                            <div className="flex items-center gap-4 px-0">
+                              {project.preview ? (
+                                <a
+                                  href={project.preview}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-2 border border-white bg-white text-black text-xs font-semibold px-2 py-1 rounded-lg 
+                                  hover:bg-gray-300 transition"
+                                >
+                                  <span>Live Preview</span>
+                                  <IoOpenOutline className="h-4 w-4" />
+                                </a>
+                              ) : (
+                                <span
+                                  title="Preview Not Available"
+                                  className="inline-flex items-center gap-2 border border-gray-500 bg-gray-500 text-black text-xs font-semibold px-2 py-1 rounded-lg 
+                                  cursor-not-allowed"
+                                >
+                                  <span>Preview Not Available</span>
+                                </span>
+                              )}
+                              {project.github ? (
+                                <a
+                                  href={project.github}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-white hover:text-gray-300 transition"
+                                >
+                                  <FaGithub className="h-5.5 w-5.5" />
+                                </a>
+                              ) : (
+                                <span
+                                  title="Private Repository"
+                                  className="text-gray-500 transition cursor-not-allowed"
+                                >
+                                  <FaGithub className="h-5.5 w-5.5" />
+                                </span>
+                              )}
+                            </div>
                           </div>
                         </div>
                       </div>
