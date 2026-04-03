@@ -6,8 +6,8 @@ export const projects: Project[] = [
     isUnderDevelopment: true,
     description: "Trucks reservation platform for quick needs such as logistics, transportation, and moving services.",
     techStack: ["NextJS", "Tailwind", "Framer Motion"],
-    github: null,
-    preview: "https://example.com",
+    github: "https://github.com/genta-bahana-nagari/truckora",
+    preview: "https://truckora.gentabahana.web.id",
     image: "/images/projects/Truckora.png",
   },
   {
