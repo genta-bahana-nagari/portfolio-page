@@ -127,7 +127,7 @@ export function Project() {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center gap-2 border border-white bg-white text-black text-xs font-semibold px-2 py-1 rounded-lg 
-                                  hover:bg-gray-300 transition"
+                                  hover:bg-gray-300 transition duration-300"
                                 >
                                   <span>Live Preview</span>
                                   <IoOpenOutline className="h-4 w-4" />
