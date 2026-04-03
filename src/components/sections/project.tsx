@@ -92,9 +92,7 @@ export function Project() {
                             className="w-full h-full object-cover rounded-lg"
                           />
                           {project.isUnderDevelopment && (
-                            <span
-                              className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/80 text-black text-xs font-semibold px-3 py-1 rounded-md shadow-xl"
-                            >
+                            <span className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/80 text-black text-xs font-semibold px-3 py-1 rounded-md shadow-xl">
                               Under Development
                             </span>
                           )}
@@ -131,7 +129,7 @@ export function Project() {
                                 <CgScreen className="h-5 w-5" />
                               </a>
                             )}
-                            {project.github && (
+                            {project.github ? (
                               <a
                                 href={project.github}
                                 target="_blank"
@@ -140,6 +138,13 @@ export function Project() {
                               >
                                 <FaGithub className="h-5 w-5" />
                               </a>
+                            ) : (
+                              <span
+                                title="Private repository"
+                                className="text-gray-500 transition cursor-not-allowed"
+                              >
+                                <FaGithub className="h-5 w-5" />
+                              </span>
                             )}
                           </div>
                         </div>

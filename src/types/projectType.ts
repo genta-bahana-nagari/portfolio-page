@@ -3,7 +3,7 @@ export type Project = {
   isUnderDevelopment: boolean;
   description: string;
   techStack: string[];
-  github: string;
+  github: string | null;
   preview: string | null;
   image: string;
 };
