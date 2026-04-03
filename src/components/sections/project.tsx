@@ -91,13 +91,10 @@ export function Project() {
                             alt={project.name}
                             className="w-full h-full object-cover rounded-lg"
                           />
-                          {project.category && (
-                            <span className="absolute top-2 right-2 bg-black/60 text-amber-300 border border-amber-500/30 text-xs px-2 py-1 rounded-md backdrop-blur-md">
-                              {project.category}
-                            </span>
-                          )}
                           {project.isUnderDevelopment && (
-                            <span className="absolute top-2 left-2 bg-white/20 text-gray-300 border border-white/30 text-xs px-2 py-1 rounded-md">
+                            <span
+                              className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/80 text-black text-xs font-semibold px-3 py-1 rounded-md shadow-xl"
+                            >
                               Under Development
                             </span>
                           )}
@@ -155,7 +152,7 @@ export function Project() {
           </div>
         </div>
 
-        {projects.length > 3 && (
+        {slides.length > 1 && (
           <div className="flex justify-center gap-4 mt-0 md:mt-6">
             <button
               onClick={() => setCurrent((prev) => Math.max(prev - 1, 0))}

@@ -2,10 +2,19 @@ import { Project } from "@/types/projectType";
 
 export const projects: Project[] = [
   {
-    name: "SIJA Phone",
-    category: "Group Project",
-    isUnderDevelopment: false,
+    name: "Truckora",
+    isUnderDevelopment: true,
     description: "Simple group project about Phone Store, featured with RBAC, checkout and shipping feature.",
+    techStack: ["NextJS", "Tailwind", "Framer Motion"],
+    github: "https://github.com/genta-bahana-nagari/truckora",
+    preview: "https://truckora.gentabahana.web.id",
+    image: "/images/projects/Truckora.png",
+  },
+  {
+    name: "SIJA Phone",
+    isUnderDevelopment: false,
+    description:
+      "Simple group project about Phone Store, featured with RBAC, checkout and shipping feature.",
     techStack: ["Laravel", "Tailwind", "MySQL"],
     github: "https://github.com/genta-bahana-nagari/sija-phone",
     preview: null,
@@ -13,9 +22,9 @@ export const projects: Project[] = [
   },
   {
     name: "SIJA Kerja",
-    category: "Learning Project",
     isUnderDevelopment: false,
-    description: "This project is based on the theme of Practical Exam, an information system for internship applications.",
+    description:
+      "This project is based on the theme of Practical Exam, an information system for internship applications.",
     techStack: ["Laravel", "Livewire", "MySQL"],
     github: "https://github.com/genta-bahana-nagari/sija-kerja",
     preview: null,
@@ -23,9 +32,9 @@ export const projects: Project[] = [
   },
   {
     name: "Inventory System",
-    category: "Learning Project",
     isUnderDevelopment: false,
-    description: "Basic inventory system with high reliability and data accuracy. Used as my Laravel learning fundamental.",
+    description:
+      "Basic inventory system with high reliability and data accuracy. Used as my Laravel learning fundamental.",
     techStack: ["Laravel", "Bootstrap", "MySQL"],
     github: "https://github.com/genta-bahana-nagari/sinvent24",
     preview: null,
