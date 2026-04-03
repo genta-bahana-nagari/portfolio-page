@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description: "Trucks reservation platform for quick needs such as logistics, transportation, and moving services.",
     techStack: ["NextJS", "Tailwind", "Framer Motion"],
     github: null,
-    preview: null,
+    preview: "https://example.com",
     image: "/images/projects/Truckora.png",
   },
   {
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     name: "SIJA Kerja",
     isUnderDevelopment: false,
     description:
-      "This project is based on the theme of Practical Exam, an information system for internship applications.",
+      "Based on the theme of Practical Exam, an information system for internship applications.",
     techStack: ["Laravel", "Livewire", "MySQL"],
     github: "https://github.com/genta-bahana-nagari/sija-kerja",
     preview: null,
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     name: "Inventory System",
     isUnderDevelopment: false,
     description:
-      "Basic inventory system with high reliability and data accuracy. Used as my Laravel learning fundamental.",
+      "Basic inventory system with high reliability and data accuracy. My Laravel journey starts here.",
     techStack: ["Laravel", "Bootstrap", "MySQL"],
     github: "https://github.com/genta-bahana-nagari/sinvent24",
     preview: null,
