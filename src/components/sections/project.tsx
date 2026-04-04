@@ -92,7 +92,7 @@ export function Project() {
                             className="w-full h-full object-cover rounded-lg"
                           />
                           {project.isUnderDevelopment && (
-                            <span className="absolute top-2 left-1/2 -translate-x-1/2 bg-white/80 text-black text-xs font-semibold px-3 py-1 rounded-md shadow-xl">
+                            <span className="absolute top-2 left-1/2 -translate-x-1/2 bg-gray-50/80 text-black text-xs font-semibold px-3 py-1 rounded-md shadow-xl/20 shadow-black">
                               Under Development
                             </span>
                           )}
