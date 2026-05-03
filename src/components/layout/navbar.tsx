@@ -6,7 +6,6 @@ import { GoProjectRoadmap } from "react-icons/go";
 
 const navLinks = [
   { href: "/", icon: <BiHome />, label: null },
-  { href: "/about", icon: <BiUser />, label: "About" },
   { href: "/project", icon: <GoProjectRoadmap />, label: "Projects" },
   { href: "/experience", icon: <BiBriefcase />, label: "Experience" },
   { href: "/contact", icon: <BiEnvelope />, label: "Contact" },
@@ -36,7 +35,7 @@ export function Navbar() {
               </Link>
 
               {index === 0 && <span className="mx-2 h-5 w-px bg-white/20" />}
-              {index === 4 && <span className="mx-2 h-5 w-px bg-white/20" />}
+              {index === 3 && <span className="mx-2 h-5 w-px bg-white/20" />}
             </div>
           ))}
         </nav>
@@ -57,7 +56,7 @@ export function Navbar() {
               </Link>
 
               {index === 0 && <span className="h-5 w-px bg-white/20" />}
-              {index === 4 && <span className="h-5 w-px bg-white/20" />}
+              {index === 3 && <span className="h-5 w-px bg-white/20" />}
             </div>
           ))}
         </nav>

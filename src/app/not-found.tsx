@@ -11,7 +11,7 @@ export default function NotFound() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 flex flex-col items-center text-center gap-6"
       >
-        <h1 className="text-7xl sm:text-8xl font-extrabold bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent drop-shadow-lg">
+        <h1 className="text-7xl sm:text-8xl font-extrabold bg-linear-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent drop-shadow-lg">
           404
         </h1>
 
@@ -19,7 +19,7 @@ export default function NotFound() {
           The page you’re looking for doesn’t exist or has been moved.
         </p>
 
-        <div className="w-16 h-[2px] bg-yellow-400/60 rounded-full" />
+        <div className="w-16 h-0.5 bg-yellow-400/60 rounded-full" />
 
         <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.96 }}>
           <Link

@@ -40,7 +40,7 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="relative w-42 h-42 md:w-60 md:h-60 md:w-60 rounded-full overflow-hidden shadow-lg shadow-black/40 md:py-4">
+        <div className="relative w-42 h-42 md:h-60 md:w-60 rounded-full overflow-hidden shadow-lg shadow-black/40 md:py-4">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -78,17 +78,19 @@ export function Hero() {
           </h1>
 
           <p className="mt-4 max-w-4xl mx-8 md:mx-auto text-sm md:text-base lg:text-lg leading-relaxed text-white/80 md:py-4">
-            A <span className="text-yellow-400 font-semibold">Developer</span>{" "}
-            who loves crafting software, passionate about{" "}
+            A simple{" "}
+            <span className="text-yellow-400 font-semibold">Developer</span> who
+            loves crafting clean, maintainable code and building end-to-end web
+            solutions. Passionate about{" "}
             <span className="text-yellow-400 font-semibold">
-              System and Network Infrastructure
+              Full Stack Development
             </span>
-            , and a{" "}
+            . Also deeply invested in{" "}
             <span className="text-yellow-400 font-semibold">
-              Culture Enthusiast
-            </span>{" "}
-            with deep love for arts — especially <span className="text-yellow-400 font-semibold">karawitan, musical theater, and
-            orchestra</span>.
+              System & Network Infrastructure
+            </span>
+            , ensuring secure, scalable, and efficient environments for modern
+            applications.
           </p>
 
           <div className="py-10 flex flex-wrap justify-center gap-3 md:gap-4">
