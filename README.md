@@ -84,9 +84,6 @@ personal-portfolio/
 ├── src/
 │   ├── app
 │   │   ├── (main)
-│   │   │   ├── about
-│   │   │   │   └── page.tsx
-│   │   │   │
 │   │   │   ├── contact
 │   │   │   │   └── page.tsx
 │   │   │   │
@@ -110,12 +107,10 @@ personal-portfolio/
 │   │
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── container.tsx
 │   │   │   ├── footer.tsx
 │   │   │   └── navbar.tsx
 │   │   │
 │   │   └── sections/
-│   │       ├── about.tsx
 │   │       ├── contact.tsx
 │   │       ├── experience.tsx
 │   │       ├── hero.tsx
