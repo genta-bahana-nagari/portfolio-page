@@ -21,9 +21,6 @@ export function Footer() {
         </div>
 
         <div className="flex justify-center gap-6 text-xs md:text-sm text-white/60">
-          <a href="/about" className="hover:text-white transition-colors">
-            About
-          </a>
           <a href="/project" className="hover:text-white transition-colors">
             Project
           </a>
