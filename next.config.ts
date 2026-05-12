@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
         destination: "https://www.gentabahana.web.id/:path*",
         permanent: true,
       },
+      {
+        source: "/((?!api).*)",
+        destination: "/",
+        permanent: false,
+      },
     ];
   },
 };
