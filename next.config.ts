@@ -29,7 +29,7 @@ const nextConfig: NextConfig = {
             value: "gentabahana.vercel.app",
           },
         ],
-        destination: "https://www.gentabahana.web.id/:path*",
+        destination: "https://profile.gentabahana.web.id/:path*",
         permanent: true,
       },
     ];

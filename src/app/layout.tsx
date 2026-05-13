@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.url}`,
     languages: {
-      "en-US": "https://gentabahana.web.id",
+      "en-US": "https://profile.gentabahana.web.id",
     },
   },
 
