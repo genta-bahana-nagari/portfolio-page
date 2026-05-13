@@ -26,10 +26,10 @@ const nextConfig: NextConfig = {
         has: [
           {
             type: "host",
-            value: "gentabahana.vercel.app",
+            value: "landing-page-genta.vercel.app",
           },
         ],
-        destination: "https://profile.gentabahana.web.id/:path*",
+        destination: "https://www.gentabahana.web.id/:path*",
         permanent: true,
       },
     ];
