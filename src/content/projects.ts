@@ -4,12 +4,11 @@ export const projects: Project[] = [
   {
     name: "Truckora",
     isUnderDevelopment: false,
-    description:
-      "Trucks reservation platform for quick needs such as logistics, transportation, and moving services.",
+    description: "Trucks reservation platform for quick needs such as logistics, transportation, and moving services.",
     techStack: ["NextJS", "Tailwind", "Framer Motion"],
     github: "https://github.com/genta-bahana-nagari/truckora",
-    preview: "https://truckora.gentabahana.web.id/images/og-image.png",
-    image: "/images/projects/Truckora.png",
+    preview: "https://truckora.gentabahana.web.id",
+    image: "https://truckora.gentabahana.web.id/images/og-image.png",
   },
   {
     name: "SIJA Phone",
