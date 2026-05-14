@@ -3,11 +3,12 @@ import { Project } from "@/types/projectType";
 export const projects: Project[] = [
   {
     name: "Truckora",
-    isUnderDevelopment: true,
-    description: "Trucks reservation platform for quick needs such as logistics, transportation, and moving services.",
+    isUnderDevelopment: false,
+    description:
+      "Trucks reservation platform for quick needs such as logistics, transportation, and moving services.",
     techStack: ["NextJS", "Tailwind", "Framer Motion"],
     github: "https://github.com/genta-bahana-nagari/truckora",
-    preview: "https://truckora.gentabahana.web.id",
+    preview: "https://truckora.gentabahana.web.id/images/og-image.png",
     image: "/images/projects/Truckora.png",
   },
   {
