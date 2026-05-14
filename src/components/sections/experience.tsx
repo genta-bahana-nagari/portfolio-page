@@ -27,8 +27,7 @@ export function Experience() {
           <p className="mx-3 md:mx-0 text-sm md:text-base leading-relaxed text-white/90">
             A combination of professional engineering experience and
             organizational involvement, spanning full-stack development roles,
-            internships, and leadership in communication and cultural
-            activities.
+            internships, and leadership in various activities.
           </p>
         </motion.div>
 
